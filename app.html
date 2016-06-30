@@ -159,9 +159,9 @@ require([
   <div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
    <div style="float: left;">
     <label id="widget_30963" data-dojo-type="gc.dijit.Label" label="Iq Ref." visible="true"></label>
-    <div id="widget_24590" data-dojo-type="gc.dijit.VerticalSlider" style="height: 335px;">
-    <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" style="width:5px;" container="rightDecoration"></div>
-      <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" style="width:3em;" container="rightDecoration"></ol>
+    <div id="widget_24590" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="0.3" discreteValues="Infinity" visible="true" style="height: 335px;">
+      <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
+      <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0%,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
     </div>
     <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 87.109375px;"></input>
   </div>
@@ -169,7 +169,7 @@ require([
  </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Settings">
     <label id="widget_22446" data-dojo-type="gc.dijit.Label" label="Max. Speed [krpm]:" visible="true" style="position: absolute; z-index: 900; left: 42px; top: 33px;"></label>
-    <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" style="position: absolute; z-index: 900; left: 214px; top: 29px; width: 78.109375px;" onchange="changeMaxSpeed"></input>
+    <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" style="position: absolute; z-index: 900; left: 214px; top: 29px; width: 78.109375px;" value="4" onchange="changeMaxSpeed"></input>
   </div>
   </span><span id="gauges" style="float: left; width: 200px;">
     <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>

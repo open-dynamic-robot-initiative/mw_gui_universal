@@ -115,7 +115,7 @@
     },
     {
         "propertyName": "value",
-        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
         "widgetId": "widget_24590",
         "options": {"dataType": "Double"}
     },
