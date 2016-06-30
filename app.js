@@ -9,6 +9,12 @@ require(["dojo/ready"], function(ready){
 			 var val = newValue ? 'Run Motor ID' : 'Run Motor';
 			 dijit.byId('tgl_runMotor').set('label', val);
 		 });
+		 
+		 
+		 
+
+		 
+		 
 
 		 // setup all speed instruments to given max. speed.
 		 changeMaxSpeed();
@@ -29,3 +35,54 @@ function changeMaxSpeed() {
 	//var labels = '0,' + (max_speed/2) + ',' + max_speed;
 	//dijit.byId('lbl_debug').set('label', labels);
 }
+
+function convertEstStateToString(state)
+{
+	/*
+	 * from MW/sw/modules/est/src/est_states.h
+	 * 
+	  typedef enum
+		{
+		  EST_State_Error=0,            //!< error
+		  EST_State_Idle,               //!< idle
+		  EST_State_RoverL,             //!< R/L estimation
+		  EST_State_Rs,                 //!< Rs estimation state
+		  EST_State_RampUp,             //!< ramp up the speed
+		#if !defined(FAST_ROM_V1p6) && !defined(FAST_ROM_V1p7)
+		  EST_State_ConstSpeed,         //!< constant speed after ramp up
+		#endif
+		  EST_State_IdRated,            //!< control Id and estimate the rated flux
+		  EST_State_RatedFlux_OL,       //!< estimate the open loop rated flux
+		  EST_State_RatedFlux,          //!< estimate the rated flux 
+		  EST_State_RampDown,           //!< ramp down the speed 
+		  EST_State_LockRotor,          //!< lock the rotor
+		  EST_State_Ls,                 //!< stator inductance estimation state
+		  EST_State_Rr,                 //!< rotor resistance estimation state
+		  EST_State_MotorIdentified,    //!< motor identified state
+		  EST_State_OnLine,             //!< online parameter estimation
+		  EST_numStates                 //!< the number of estimator states
+		} EST_State_e;
+		
+		NOTE: Assume the #if is false
+	 */
+	
+	const state_names = [
+		  "EST_State_Error",
+		  "EST_State_Idle",
+		  "EST_State_RoverL",
+		  "EST_State_Rs",
+		  "EST_State_RampUp",
+		  "EST_State_IdRated",
+		  "EST_State_RatedFlux_OL",
+		  "EST_State_RatedFlux",
+		  "EST_State_RampDown",
+		  "EST_State_LockRotor",
+		  "EST_State_Ls",
+		  "EST_State_Rr",
+		  "EST_State_MotorIdentified",
+		  "EST_State_OnLine",
+		  "EST_numStates"
+		  ];
+	
+	return state_names[state];
+  }

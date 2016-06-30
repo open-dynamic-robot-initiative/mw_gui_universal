@@ -49,6 +49,8 @@ require([
   <div style="width: 100%">
     <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
     <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
+    <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true"></label>
+    <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ?" visible="true"></label>
     <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
   </div>
 
@@ -74,8 +76,8 @@ require([
           <td>
             USER_MOTOR_Ls_d</td>
           <td>
-            <input id="widget_15410" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
+           <input id="widget_15410" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+         </td>
         </tr>
         <tr>
           <td>

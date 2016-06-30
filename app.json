@@ -130,5 +130,14 @@
         "serverBindName": "Q(gMotorVars.Iq_A, 24)",
         "widgetId": "widget_27875",
         "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gMotorVars.EstState",
+        "widgetId": "lbl_ESTstate",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "convertEstStateToString"
+        }
     }
 ]}
