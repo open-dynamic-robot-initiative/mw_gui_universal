@@ -1,0 +1,134 @@
+{"widgetBindings": [
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.Speed_krpm, 24)",
+        "widgetId": "gauge_speedFAST",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_enableSys",
+        "widgetId": "widget_18276",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_Run_Identify",
+        "widgetId": "tgl_runMotor",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Rr_Ohm",
+        "widgetId": "widget_26548",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Rs_Ohm",
+        "widgetId": "widget_25384",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Lsd_H",
+        "widgetId": "widget_15410",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Lsq_H",
+        "widgetId": "widget_9280",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Flux_VpHz",
+        "widgetId": "widget_15281",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_MotorIdentified",
+        "widgetId": "chk_motorIdDone",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[0], 24)",
+        "widgetId": "txt_I_A_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[1], 24)",
+        "widgetId": "txt_I_B_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[2], 24)",
+        "widgetId": "txt_I_C_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[0], 24)",
+        "widgetId": "txt_V_A_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[1], 24)",
+        "widgetId": "txt_V_B_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[2], 24)",
+        "widgetId": "txt_V_C_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedQEP_krpm, 24)",
+        "widgetId": "gauge_speedQEP",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedRef_krpm, 24)",
+        "widgetId": "sld_speedRef",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedRef_krpm, 24)",
+        "widgetId": "widget_34152",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.MaxAccel_krpmps, 24)",
+        "widgetId": "widget_30148",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "widgetId": "widget_24590",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
+        "widgetId": "widget_2398",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "widgetId": "widget_27875",
+        "options": {"dataType": "Double"}
+    }
+]}

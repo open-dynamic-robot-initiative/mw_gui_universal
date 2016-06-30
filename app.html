@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<!-- Do not remove or modify this line --><head data-gc-version="1.5.201401031800">
+<meta charset="utf-8"/>
+<title>Untitled</title>
+<script type="text/javascript" src="lib/davinci.dojo_1_8/WebContent/dojo/dojo/dojo.js" data-dojo-config="'parseOnLoad':true,'async':true,'packages':[{'name':'gc','location':'../../../../davinci.gc_1_5/WebContent/gc'},{'name':'maqetta','location':'../../../../davinci.gc_1_5/WebContent/maqetta'}]"></script>
+<script type="text/javascript">
+require([
+  "dijit/dijit",
+  "dojo/parser",
+  "maqetta/space",
+  "maqetta/AppStates",
+  "gc/dijit/ContentPane",
+  "gc/dijit/Label",
+  "dijit/form/ToggleButton",
+  "gc/dijit/libs/steelseries/tween.amd.min",
+  "gc/dijit/libs/steelseries/steelseries.amd.min",
+  "gc/dijit/AnalogGauge",
+  "dijit/form/CheckBox",
+  "dijit/form/HorizontalSlider",
+  "dijit/form/HorizontalRule",
+  "dijit/form/HorizontalRuleLabels",
+  "gc/dijit/ToggleButton",
+  "gc/dijit/TitlePane",
+  "gc/dijit/TextBox",
+  "gc/dijit/CheckBox",
+  "gc/dijit/TextArea",
+  "dijit/layout/TabContainer",
+  "dijit/layout/ContentPane",
+  "gc/dijit/VerticalSlider",
+  "gc/dijit/VerticalRule",
+  "gc/dijit/VerticalRuleLabels",
+  "gc/dijit/NumberSpinner",
+  "gc/dijit/AnalogMeter"
+]);
+</script>
+<style>@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/document.css";@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/claro.css";@import "lib/davinci.dojo_1_8/WebContent/dojo/dojo/resources/dojo.css";@import "lib/davinci.gc_1_5/WebContent/gc/dijit/libs/css/widgets.css";@import "app.css";
+</style>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="lib/davinci.gc_1_5/WebContent/gc/backplane/guiComposer.js"></script>
+<script type="text/javascript" src="app.js"></script>
+</head>
+<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="true" data-maq-comptype="desktop" data-maq-appstates="{}" id="myapp">
+
+<div id="widget_1" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="border-radius: 6px; -moz-border-radius: 6px; margin: 1em; background-image: -webkit-gradient(linear, left top, left bottom, from(#b6b3b3), to(#9e9c9c)); background-image: -o-linear-gradient(#b6b3b3, #9e9c9c); background-image: -ms-linear-gradient(#b6b3b3, #9e9c9c); background-image: -moz-linear-gradient(#b6b3b3, #9e9c9c); background-image: -webkit-linear-gradient(#b6b3b3, #9e9c9c); background-image: linear-gradient(#b6b3b3, #9e9c9c); width: 771px; text-align: center;">
+<label id="widget_2" data-dojo-type="gc.dijit.Label" label="Motor Identification &amp; Test GUI" visible="true" style="font-size: 3em; color: #ffffff;"></label>
+</div>
+<div id="widget_6" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="border-radius: 6px; -moz-border-radius: 6px; margin: 1em; height: 489px; background-color: #dfdcdc; width: 771px;">
+  <div style="width: 100%">
+    <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
+    <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
+    <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
+  </div>
+
+  <span data-dojo-type="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; height: 428px; width: 450px; margin-right: 3em;" class="floatleft">
+<div data-dojo-type="dijit.layout.ContentPane" title="Motor ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" style="float: left;">
+    <span id="widget_19617" data-dojo-type="gc.dijit.TitlePane" title="Motor Parameters" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; z-index: 900; width: 400px; margin-top: 1em;"><table style="width: 100%;">
+      <tbody>
+        <tr>
+          <td>
+            USER_MOTOR_Rr</td>
+          <td>
+            <input id="widget_26548" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            USER_MOTOR_Rs</td>
+          <td>
+            <input id="widget_25384" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            USER_MOTOR_Ls_d</td>
+          <td>
+            <input id="widget_15410" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            USER_MOTOR_Ls_q</td>
+          <td>
+            <input id="widget_9280" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            USER_MOTOR_RATED_FLUX</td>
+          <td>
+            <input id="widget_15281" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </span><span id="widget_7102" data-dojo-type="gc.dijit.TitlePane" title="Inverter Offsets" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; width: 400px; margin-top: 1em;"><table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
+      <colgroup>
+        <col></col>
+        <col></col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <td>
+            I_A_offset</td>
+          <td>
+            <input id="txt_I_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            I_B_offset</td>
+          <td>
+            <input id="txt_I_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            I_C_offset</td>
+          <td>
+            <input id="txt_I_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            V_A_offset</td>
+          <td>
+            <input id="txt_V_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            V_B_offset</td>
+          <td>
+            <input id="txt_V_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            V_C_offset</td>
+          <td>
+            <input id="txt_V_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </span>
+  </div>
+  <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="true" closable="false">
+    <div id="sld_speedRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="position: absolute; z-index: 900; left: 56px; top: 48px; height: 286px;">
+      <div id="widget_18273" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
+      <ol id="sldlbl_speedRef" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
+    </div>
+    <label style="position: absolute; z-index: 900; left: 32px; top: 16px;">
+      Speed Reference [krpm]</label>
+    <input type="text" id="widget_34152" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="position: absolute; z-index: 900; width: 64.109375px; left: 49.4453125px; top: 347px;"></input>
+    <input type="text" id="widget_30148" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="position: absolute; z-index: 900; left: 314px; top: 49px; width: 83.109375px;"></input>
+    <label id="widget_6005" data-dojo-type="gc.dijit.Label" label="Max. Acceleration:" visible="true" style="position: absolute; z-index: 900; left: 173px; top: 53px;"></label>
+  </div>
+  <div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
+   <div style="float: left;">
+    <label id="widget_30963" data-dojo-type="gc.dijit.Label" label="Iq Ref." visible="true"></label>
+    <div id="widget_24590" data-dojo-type="gc.dijit.VerticalSlider" style="height: 335px;">
+    <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" style="width:5px;" container="rightDecoration"></div>
+      <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" style="width:3em;" container="rightDecoration"></ol>
+    </div>
+    <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 87.109375px;"></input>
+  </div>
+   <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="0" maxValue="1" value="0" thresholdValue="1" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin-top: 1em; margin-left: 5em;"></canvas>
+ </div>
+  <div data-dojo-type="dijit.layout.ContentPane" title="Settings">
+    <label id="widget_22446" data-dojo-type="gc.dijit.Label" label="Max. Speed [krpm]:" visible="true" style="position: absolute; z-index: 900; left: 42px; top: 33px;"></label>
+    <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" style="position: absolute; z-index: 900; left: 214px; top: 29px; width: 78.109375px;" onchange="changeMaxSpeed"></input>
+  </div>
+  </span><span id="gauges" style="float: left; width: 200px;">
+    <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
+  <canvas id="gauge_speedQEP" data-dojo-type="gc.dijit.AnalogGauge" title="Speed QEP" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin-left: 1em;"></canvas>
+  </span>
+</div>
+<label id="lbl_debug" data-dojo-type="gc.dijit.Label" label="Debug Label" visible="true" style="position: absolute; z-index: 900; left: 566px; top: 94px;"></label>
+</body>
+</html>
