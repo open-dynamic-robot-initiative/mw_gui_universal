@@ -31,7 +31,7 @@ function changeMaxSpeed() {
 	dijit.byId('gauge_speedQEP').set('maxValue', max_speed);
 	dijit.byId('gauge_speedQEP').set('thresholdValue', max_speed);
 
-	dijit.byId('sld_speedRef').set('maxValue', max_speed);
+	dijit.byId('sld_speedRef').set('maximum', max_speed);
 	//var labels = '0,' + (max_speed/2) + ',' + max_speed;
 	//dijit.byId('lbl_debug').set('label', labels);
 }

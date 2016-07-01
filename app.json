@@ -139,5 +139,41 @@
             "dataType": "String",
             "inPreProcessingFunction": "convertEstStateToString"
         }
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.SpinTAC.VelIdRun",
+        "widgetId": "widget_22019",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.InertiaEstimate_Aperkrpm, 24)",
+        "widgetId": "widget_18009",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.FrictionEstimate_Aperkrpm, 24)",
+        "widgetId": "widget_3467",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.VelIdGoalSpeed_krpm, 24)",
+        "widgetId": "widget_31340",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.VelIdTorqueRampTime_sec, 24)",
+        "widgetId": "widget_6034",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.SpinTAC.VelIdErrorID",
+        "widgetId": "widget_19405",
+        "options": {"dataType": "String"}
     }
 ]}

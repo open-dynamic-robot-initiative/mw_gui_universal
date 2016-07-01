@@ -56,6 +56,8 @@ require([
 
   <span data-dojo-type="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; height: 428px; width: 450px; margin-right: 3em;" class="floatleft">
 <div data-dojo-type="dijit.layout.ContentPane" title="Motor ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" style="float: left;">
+    <p style="margin: 0.5em;">
+      Motor and inverter parameter identification. Use lab02b for this.</p>
     <span id="widget_19617" data-dojo-type="gc.dijit.TitlePane" title="Motor Parameters" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; z-index: 900; width: 400px; margin-top: 1em;"><table style="width: 100%;">
       <tbody>
         <tr>
@@ -147,6 +149,63 @@ require([
     </table>
     </span>
   </div>
+  <div data-dojo-type="dijit.layout.ContentPane" title="Inertia ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="true" closable="false">
+   <p>
+     Inertia Identification of the system. Use lab12a for this.</p>
+   <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
+     <colgroup>
+       <col></col>
+       <col></col>
+     </colgroup>
+     <tbody>
+       <tr>
+         <td>
+           Goal Speed [krpm]</td>
+         <td>
+           <input type="text" id="widget_31340" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="0"></input>
+         </td>
+       </tr>
+       <tr>
+         <td>
+           Torque Ramp Time [sec]</td>
+         <td>
+           <input type="text" id="widget_6034" data-dojo-type="gc.dijit.NumberSpinner" value="0"></input>
+</td>
+       </tr>
+     </tbody>
+   </table>
+   <input id="widget_22019" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Inertia ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
+   <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
+<colgroup>
+       <col></col>
+       <col></col>
+     </colgroup>
+     <tbody>
+       <tr>
+         <td>
+           USER_SYSTEM_INERTIA</td>
+         <td>
+           &nbsp;<input id="widget_18009" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+</td>
+       </tr>
+       <tr>
+         <td>
+           USER_SYSTEM_FRICTION</td>
+         <td>
+           &nbsp;<input id="widget_3467" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+</td>
+       </tr>
+       <tr>
+         <td>
+           SpinTAC.VelIdErrorID</td>
+         <td>
+           &nbsp;<input id="widget_19405" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" readOnly="true"></input>
+</td>
+       </tr>
+     </tbody>
+   </table>
+   <label id="widget_25723" data-dojo-type="gc.dijit.Label" label="If Error ID is not 0, please refer to the labs Users's Guide or document SPRUHJ1F for the meaning of the different error codes." visible="true"></label>
+ </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="true" closable="false">
     <div id="sld_speedRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="position: absolute; z-index: 900; left: 56px; top: 48px; height: 286px;">
       <div id="widget_18273" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
@@ -175,7 +234,7 @@ require([
   </div>
   </span><span id="gauges" style="float: left; width: 200px;">
     <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
-  <canvas id="gauge_speedQEP" data-dojo-type="gc.dijit.AnalogGauge" title="Speed QEP" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin-left: 1em;"></canvas>
+    <canvas id="gauge_speedQEP" data-dojo-type="gc.dijit.AnalogGauge" title="Speed QEP" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin-left: 1em;"></canvas>
   </span>
 </div>
 <label id="lbl_debug" data-dojo-type="gc.dijit.Label" label="Debug Label" visible="true" style="position: absolute; z-index: 900; left: 566px; top: 94px;"></label>
