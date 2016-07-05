@@ -40,7 +40,7 @@ require([
 <script type="text/javascript" src="lib/davinci.gc_1_5/WebContent/gc/backplane/guiComposer.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </head>
-<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="true" data-maq-comptype="desktop" data-maq-appstates="{}" id="myapp">
+<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="true" data-maq-comptype="desktop" id="myapp" data-maq-appstates="{}">
 
 <div id="widget_1" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="border-radius: 6px; -moz-border-radius: 6px; margin: 1em; background-image: -webkit-gradient(linear, left top, left bottom, from(#b6b3b3), to(#9e9c9c)); background-image: -o-linear-gradient(#b6b3b3, #9e9c9c); background-image: -ms-linear-gradient(#b6b3b3, #9e9c9c); background-image: -moz-linear-gradient(#b6b3b3, #9e9c9c); background-image: -webkit-linear-gradient(#b6b3b3, #9e9c9c); background-image: linear-gradient(#b6b3b3, #9e9c9c); width: 771px; text-align: center;">
 <label id="widget_2" data-dojo-type="gc.dijit.Label" label="Motor Identification &amp; Test GUI" visible="true" style="font-size: 3em; color: #ffffff;"></label>
@@ -49,7 +49,7 @@ require([
   <div style="width: 100%">
     <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
     <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
-    <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true"></label>
+    <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true" style="margin-right: 1ex; margin-left: 2em;"></label>
     <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ?" visible="true"></label>
     <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
   </div>
@@ -220,18 +220,52 @@ require([
   <div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
    <div style="float: left;">
     <label id="widget_30963" data-dojo-type="gc.dijit.Label" label="Iq Ref." visible="true"></label>
-    <div id="widget_24590" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="0.3" discreteValues="Infinity" visible="true" style="height: 335px;">
+    <div id="sld_IqRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="0.3" discreteValues="Infinity" visible="true" style="height: 335px;">
       <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
       <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0%,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
     </div>
     <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 87.109375px;"></input>
   </div>
-   <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="0" maxValue="1" value="0" thresholdValue="1" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin-top: 1em; margin-left: 5em;"></canvas>
- </div>
-  <div data-dojo-type="dijit.layout.ContentPane" title="Settings">
-    <label id="widget_22446" data-dojo-type="gc.dijit.Label" label="Max. Speed [krpm]:" visible="true" style="position: absolute; z-index: 900; left: 42px; top: 33px;"></label>
-    <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" style="position: absolute; z-index: 900; left: 214px; top: 29px; width: 78.109375px;" value="4" onchange="changeMaxSpeed"></input>
+   <div data-dojo-type="dijit.layout.ContentPane" title="Pane" doLayout="false" style="height: auto; width: auto; text-align: center;">
+    <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="-10" maxValue="10" value="0" thresholdValue="1" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin: 2em;"></canvas>
+    <input id="tgl_virtualSpringMode" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Virtual Spring Mode" visible="true" iconClass="dijitCheckBoxIcon" onchange="onChangeVirtualSpringMode"></input>
+    <br/>
+    <label style="margin-right: 1ex;">
+    Stiffness:</label>
+    <input id="widget_2501" type="text" data-dojo-type="gc.dijit.TextBox" style="width: 42px;"></input>
+    <br/>
+    <label style="margin-right: 1ex;">
+    Max. IqRef:</label>
+    <input id="txt_maxIqRef" type="text" data-dojo-type="gc.dijit.TextBox" style="width: 42px;"></input><br/>
+    <label style="margin-right: 1ex;">
+    Position:</label>
+    <label id="widget_15837" data-dojo-type="gc.dijit.Label" label="Pos_mrev" visible="true"></label>
   </div>
+   </div>
+  <div data-dojo-type="dijit.layout.ContentPane" title="Settings">
+   <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
+     <colgroup>
+       <col></col>
+       <col></col>
+     </colgroup>
+     <tbody>
+       <tr>
+       <td>
+           GUI Update Rate:</td>
+         <td>
+           <input type="text" id="widget_28343" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="0"></input>
+         </td>
+       </tr>
+       <tr>
+         <td>
+         Max. Speed [krpm]:</td>
+         <td>
+          <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" value="4" onchange="changeMaxSpeed"></input>
+        </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
   </span><span id="gauges" style="float: left; width: 200px;">
     <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
     <canvas id="gauge_speedQEP" data-dojo-type="gc.dijit.AnalogGauge" title="Speed QEP" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin-left: 1em;"></canvas>

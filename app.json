@@ -116,7 +116,7 @@
     {
         "propertyName": "value",
         "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
-        "widgetId": "widget_24590",
+        "widgetId": "sld_IqRef",
         "options": {"dataType": "Double"}
     },
     {
@@ -175,5 +175,44 @@
         "serverBindName": "gMotorVars.SpinTAC.VelIdErrorID",
         "widgetId": "widget_19405",
         "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gVirtualSpring.enabled",
+        "widgetId": "tgl_virtualSpringMode",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gVirtualSpring.stiffness, 24)",
+        "widgetId": "widget_2501",
+        "options": {
+            "dataType": "String",
+            "outPreProcessingFunction": "validateVirtualSpringStiffness"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "widgetId": "widget_15837",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "$refresh_interval",
+        "widgetId": "widget_28343",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gVirtualSpring.maxCurrentRef, 24)",
+        "widgetId": "txt_maxIqRef",
+        "options": {
+            "dataType": "String",
+            "outPreProcessingFunction": "validateNumber"
+        }
     }
 ]}

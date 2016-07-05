@@ -26,14 +26,20 @@ function changeMaxSpeed() {
 	var max_speed = dijit.byId('nsp_maxSpeed').get('value');
 	
 	dijit.byId('gauge_speedFAST').set('maxValue', max_speed);
+	dijit.byId('gauge_speedFAST').set('minValue', -max_speed);
 	dijit.byId('gauge_speedFAST').set('thresholdValue', max_speed);
 
 	dijit.byId('gauge_speedQEP').set('maxValue', max_speed);
+	dijit.byId('gauge_speedQEP').set('minValue', -max_speed);
 	dijit.byId('gauge_speedQEP').set('thresholdValue', max_speed);
 
 	dijit.byId('sld_speedRef').set('maximum', max_speed);
 	//var labels = '0,' + (max_speed/2) + ',' + max_speed;
 	//dijit.byId('lbl_debug').set('label', labels);
+}
+
+function mrevToDegree(valueFromTarget) {
+	return valueFromTarget * 360;
 }
 
 function convertEstStateToString(state)
@@ -85,4 +91,21 @@ function convertEstStateToString(state)
 		  ];
 	
 	return state_names[state];
-  }
+}
+
+function validateNumber(value) {
+	return isNaN(value) ? 0 : value;
+}
+
+function validateVirtualSpringStiffness(value) {
+	if (isNaN(value) || value < 0)
+		return 0;
+	else
+		return value;
+}
+
+function onChangeVirtualSpringMode() {
+	const is_vs_on = dijit.byId("tgl_virtualSpringMode").get("checked");
+	
+	dijit.byId("sld_IqRef").set("disabled", is_vs_on);
+}
