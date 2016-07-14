@@ -117,7 +117,11 @@
         "propertyName": "value",
         "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
         "widgetId": "sld_IqRef",
-        "options": {"dataType": "Double"}
+        "options": {
+            "dataType": "Double",
+            "outPreProcessingFunction": "postproc_sld_IqRef",
+            "inPreProcessingFunction": "preproc_sld_IqRef"
+        }
     },
     {
         "propertyName": "value",
@@ -193,7 +197,7 @@
     },
     {
         "propertyName": "label",
-        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "serverBindName": "Q(gVirtualSpring.deflection, 24)",
         "widgetId": "widget_15837",
         "options": {
             "dataType": "String",
@@ -214,5 +218,83 @@
             "dataType": "String",
             "outPreProcessingFunction": "validateNumber"
         }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "widgetId": "widget_28678",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_erev, 24)",
+        "widgetId": "widget_33109",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_pos_deg",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Speed_krpm, 24)",
+        "widgetId": "lbl_speed_fast",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.SpeedQEP_krpm, 24)",
+        "widgetId": "lbl_speed_qep",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "widgetId": "lbl_Iq",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
+        "widgetId": "lbl_IqRef",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Torque_Nm, 24)",
+        "widgetId": "lbl_torque",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gVirtualSpring.flagResetOffset",
+        "widgetId": "widget_27886",
+        "options": {"dataType": "String"}
     }
 ]}

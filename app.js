@@ -39,7 +39,7 @@ function changeMaxSpeed() {
 }
 
 function mrevToDegree(valueFromTarget) {
-	return valueFromTarget * 360;
+	return (valueFromTarget * 360).toFixed(2);
 }
 
 function convertEstStateToString(state)
@@ -108,4 +108,18 @@ function onChangeVirtualSpringMode() {
 	const is_vs_on = dijit.byId("tgl_virtualSpringMode").get("checked");
 	
 	dijit.byId("sld_IqRef").set("disabled", is_vs_on);
+}
+
+function preproc_sld_IqRef( valueFromTarget) {
+	if (dijit.byId("chk_IqRefRevert").get("checked"))
+		return -valueFromTarget;
+	else
+		return valueFromTarget;
+}
+
+function postproc_sld_IqRef( valueToTarget) {
+	if (dijit.byId("chk_IqRefRevert").get("checked"))
+		return -valueToTarget;
+	else
+		return valueToTarget;
 }
