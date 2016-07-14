@@ -33,7 +33,10 @@ require([
   "gc/dijit/NumberSpinner",
   "gc/dijit/AnalogMeter",
   "gc/dijit/Button",
-  "gc/dijit/ValueButton"
+  "gc/dijit/ValueButton",
+  "gc/dijit/HorizontalSlider",
+  "gc/dijit/HorizontalRule",
+  "gc/dijit/HorizontalRuleLabels"
 ]);
 </script>
 <style>@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/document.css";@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/claro.css";@import "lib/davinci.dojo_1_8/WebContent/dojo/dojo/resources/dojo.css";@import "lib/davinci.gc_1_5/WebContent/gc/dijit/libs/css/widgets.css";@import "app.css";
@@ -53,7 +56,7 @@ require([
     <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
     <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
     <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true" style="margin-right: 1ex; margin-left: 2em;"></label>
-    <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ?" visible="true"></label>
+    <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ???" visible="true"></label>
     <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
   </div>
 
@@ -275,7 +278,7 @@ require([
       <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 87.109375px;"></input>
     </div>
     <div data-dojo-type="dijit.layout.ContentPane" title="Pane" doLayout="false" style="height: auto; width: auto; text-align: center;">
-      <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="-10" maxValue="10" value="0" thresholdValue="1" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin: 2em;"></canvas>
+      <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="-10" maxValue="10" value="0" thresholdValue="1" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin-bottom: 1em;"></canvas>
       <input id="tgl_virtualSpringMode" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Virtual Spring Mode" visible="true" iconClass="dijitCheckBoxIcon" onchange="onChangeVirtualSpringMode"></input>
       <br/>
       <label style="margin-right: 1ex;">
@@ -293,6 +296,13 @@ require([
         Deflection [deg]:</label>
       <label id="widget_15837" data-dojo-type="gc.dijit.Label" label="???" visible="true"></label>
       <input id="widget_27886" type="button" data-dojo-type="gc.dijit.ValueButton" value="1" intermediateChanges="false" label="Reset" iconClass="dijitNoIcon" visible="true"></input>
+      <br/>
+      <label>
+        Offset [deg]:</label>
+      <div id="widget_1753" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="1" discreteValues="Infinity" pageIncrement="0.1" visible="true" style="margin: auto; width: 200px;">
+        <div id="widget_14261" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+        <ol id="widget_31485" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0°,180°,360°" container="bottomDecoration" style="font-size: 80%; height: auto;" count="3" numericMargin="0"></ol>
+      </div>
     </div>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Settings">
@@ -337,49 +347,49 @@ require([
      <tr>
        <td>
          Pos_mrev</td>
-       <td><label id="widget_28678" data-dojo-type="gc.dijit.Label" label="???" visible="true"></label>
+       <td><label id="widget_28678" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
 </td>
      </tr>
      <tr>
        <td>
          Pos_erev</td>
-       <td><label id="widget_33109" data-dojo-type="gc.dijit.Label" visible="true" label="???"></label>
+       <td><label id="widget_33109" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label>
 </td>
      </tr>
      <tr>
       <td>Pos mech. [deg]</td>
       <td>
-       <label id="lbl_pos_deg" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_pos_deg" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
      <tr>
       <td>Speed FAST [krpm]</td>
       <td>
-       <label id="lbl_speed_fast" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_speed_fast" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
      <tr>
       <td>Speed Encoder [krpm]</td>
       <td>
-       <label id="lbl_speed_qep" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_speed_qep" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
      <tr>
       <td>I<sub>q</sub> Ref [A]</td>
       <td>
-       <label id="lbl_IqRef" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_IqRef" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
      <tr>
       <td>I<sub>q</sub> [A]</td>
       <td>
-       <label id="lbl_Iq" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_Iq" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
      <tr>
       <td>Torque [Nm]</td>
       <td>
-       <label id="lbl_torque" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+       <label id="lbl_torque" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
      </td>
      </tr>
    </tbody>

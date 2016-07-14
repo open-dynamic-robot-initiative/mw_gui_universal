@@ -296,5 +296,11 @@
         "serverBindName": "gVirtualSpring.flagResetOffset",
         "widgetId": "widget_27886",
         "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gVirtualSpring.equilibriumPosition, 24)",
+        "widgetId": "widget_1753",
+        "options": {"dataType": "Double"}
     }
 ]}
