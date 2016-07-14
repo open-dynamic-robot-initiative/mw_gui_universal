@@ -188,7 +188,7 @@
     },
     {
         "propertyName": "value",
-        "serverBindName": "Q(gVirtualSpring.stiffness, 24)",
+        "serverBindName": "gVirtualSpring.stiffness",
         "widgetId": "widget_2501",
         "options": {
             "dataType": "String",
