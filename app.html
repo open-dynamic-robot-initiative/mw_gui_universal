@@ -10,7 +10,15 @@ require([
   "dojo/parser",
   "maqetta/space",
   "maqetta/AppStates",
-  "gc/dijit/ToggleButton"
+  "gc/dijit/ToggleButton",
+  "gc/dijit/libs/steelseries/tween.amd.min",
+  "gc/dijit/libs/steelseries/steelseries.amd.min",
+  "gc/dijit/AnalogGauge",
+  "gc/dijit/DigitalGauge",
+  "gc/dijit/Label",
+  "gc/dijit/FuelGauge",
+  "dijit/layout/TabContainer",
+  "dijit/layout/ContentPane"
 ]);
 </script>
 <style>@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/document.css";@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/claro.css";@import "lib/davinci.dojo_1_8/WebContent/dojo/dojo/resources/dojo.css";@import "lib/davinci.gc_1_5/WebContent/gc/dijit/libs/css/widgets.css";@import "app.css";
@@ -20,7 +28,7 @@ require([
 </head>
 <body data-maq-flow-layout="true" data-maq-comptype="desktop" class="claro" data-maq-ws="collapse" data-maq-appstates="{}" id="myapp">
 
-<div style="width: 1200px;">
+<div id="body">
 
 <div style="background: grey;">
  <span style="color: white; font-size: 150%; margin: 1ex 1em; vertical-align: middle">Universal Dual Motor GUI</span>
@@ -29,10 +37,133 @@ require([
 </div>
 
 <div style="background: lightgrey; padding: 1em;">
-bla
-</div>
+ <div id="monitor_motor1" class="motor_monitor">
+   <h1 style="border-bottom: 3px solid green">
+   Motor 1</h1>
+   <input id="btn_runMotor1" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 1" visible="true" iconClass="dijitCheckBoxIcon">
+ </input>
+     <p>
+       Status: ???</p>
+   <canvas id="widget_17931" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="green" visible="true" style="height: 150px; width: 150px;"></canvas>
+   <canvas id="widget_24586" data-dojo-type="gc.dijit.DigitalGauge" title="Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="green" visible="true" style="width: 150px; height: 150px;"></canvas>
+   <div style="border: 1px solid grey; padding: 1ex; background: white; font-size: 120%; margin-top: 1em; width: auto;">
+ <table style="width: 100%; height: auto;" cellspacing="5">
+     <tbody>
+       <tr>
+         <td>Pos_mrev</td>
+         <td style="font-family: monospace; width: 8em;">
+           <label id="lbl_Pos_mrev1" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
+         </td>
+       </tr>
+       <tr>
+         <td>Pos_erev</td>
+         <td><label id="lbl_Pos_erev1" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Pos mech. [deg]</td>
+         <td><label id="lbl_pos_deg1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Speed FAST [krpm]</td>
+         <td><label id="lbl_speed_fast1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Speed Encoder [krpm]</td>
+         <td><label id="lbl_speed_qep1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>I<sub>q</sub> Ref [A]</td>
+         <td><label id="lbl_IqRef1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>I<sub>q</sub> [A]</td>
+         <td>
+           <label id="lbl_Iq1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+         </td>
+       </tr>
+       <tr>
+         <td>Torque [Nm]</td>
+         <td><label id="lbl_torque1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Encoder Error [counts]</td>
+         <td><label id="lbl_encoderError1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+     </tbody>
+   </table>
+  </div>
 
-</div>
 
-</body>
-</html>
+ </div>
+
+   <div id="monitor_motor2" class="motor_monitor">
+     <h1 style="border-bottom: 3px solid blue;">
+       Motor 2</h1>
+     <input id="btn_runMotor2" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 2" visible="true" iconClass="dijitCheckBoxIcon">
+ </input>
+       <p>         Status: ???</p>
+   <canvas id="widget_21391" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
+   <canvas id="widget_9794" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
+       <div style="border: 1px solid grey; padding: 1ex; background: white; font-size: 120%; margin-top: 1em; width: auto;">
+ <table style="width: 100%; height: auto;" cellspacing="5">
+     <tbody>
+       <tr>
+         <td>Pos_mrev</td>
+         <td style="font-family: monospace; width: 8em;">
+           <label id="lbl_Pos_mrev2" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
+         </td>
+       </tr>
+       <tr>
+         <td>Pos_erev</td>
+         <td><label id="lbl_Pos_erev2" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Pos mech. [deg]</td>
+         <td><label id="lbl_pos_deg2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Speed FAST [krpm]</td>
+         <td><label id="lbl_speed_fast2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Speed Encoder [krpm]</td>
+         <td><label id="lbl_speed_qep2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>I<sub>q</sub> Ref [A]</td>
+         <td><label id="lbl_IqRef2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>I<sub>q</sub> [A]</td>
+         <td>
+           <label id="lbl_Iq2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+         </td>
+       </tr>
+       <tr>
+         <td>Torque [Nm]</td>
+         <td><label id="lbl_torque2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+       <tr>
+         <td>Encoder Error [counts]</td>
+         <td><label id="lbl_encoderError2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+       </tr>
+     </tbody>
+   </table>
+  </div>
+
+
+     </div>
+
+
+ <div id="controls">
+ <span data-dojo-type="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 100%; height: 300px;" controllerWidget="dijit.layout.TabController">
+<div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" doLayout="false"></div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false"></div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Settings"></div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Export"></div>
+</span></div>
+
+     <div style="clear: both;"></div>
+</div>
+</div>
+</body></html>

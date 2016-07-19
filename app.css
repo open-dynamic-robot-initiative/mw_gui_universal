@@ -34,3 +34,21 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
+
+div#body {
+	width: 1200px;
+	height: 800px;
+}
+
+.motor_monitor {
+	float: left;
+	width: 26%;
+	height: 500px;
+	border: 1px solid grey;
+	margin-right: 1%;
+}
+
+div#controls {
+	float: left;
+	width: 45%;
+}
