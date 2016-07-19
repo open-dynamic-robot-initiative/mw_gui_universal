@@ -1,4 +1,6 @@
 /*
+ * AMD Universal Dual Motor GUI
+ * 
  * This file is provided for custom JavaScript logic that your HTML files might need.
  * GUI Composer includes this JavaScript file by default within HTML pages authored in GUI Composer.
  */
@@ -13,4 +15,8 @@ require(["dojo/ready"], function(ready){
 function setZero(elementId)
 {
 	dijit.byId(elementId).set("value", 0);
+}
+
+function mrevToDegree(valueFromTarget) {
+	return (valueFromTarget * 360).toFixed(2);
 }

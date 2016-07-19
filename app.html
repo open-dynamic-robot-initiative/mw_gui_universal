@@ -20,7 +20,10 @@ require([
   "dijit/layout/TabContainer",
   "dijit/layout/ContentPane",
   "gc/dijit/Dial",
-  "gc/dijit/NumberSpinner"
+  "gc/dijit/NumberSpinner",
+  "gc/dijit/HorizontalSlider",
+  "gc/dijit/HorizontalRule",
+  "gc/dijit/HorizontalRuleLabels"
 ]);
 </script>
 <style>@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/document.css";@import "lib/davinci.dojo_1_8/WebContent/maqetta/themes/claro/claro.css";@import "lib/davinci.dojo_1_8/WebContent/dojo/dojo/resources/dojo.css";@import "lib/davinci.gc_1_5/WebContent/gc/dijit/libs/css/widgets.css";@import "app.css";
@@ -34,7 +37,8 @@ require([
 
 <div style="background: grey;">
  <span style="color: white; font-size: 150%; margin: 1ex 1em; vertical-align: middle">Universal Dual Motor GUI</span>
- <span style="margin-left: 3em;"><input id="widget_28123" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
+ <span style="margin-left: 3em;">
+  <input id="widget_28123" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
 </span>
 </div>
 
@@ -44,7 +48,7 @@ require([
    Motor 1</h1>
    <input id="btn_runMotor1" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 1" visible="true" iconClass="dijitCheckBoxIcon">
  </input>
-     <p>
+   <p>
        Status: ???</p>
    <canvas id="widget_17931" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="green" visible="true" style="height: 150px; width: 150px;"></canvas>
    <canvas id="widget_24586" data-dojo-type="gc.dijit.DigitalGauge" title="Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="green" visible="true" style="width: 150px; height: 150px;"></canvas>
@@ -59,23 +63,27 @@ require([
        </tr>
        <tr>
          <td>Pos_erev</td>
-         <td><label id="lbl_Pos_erev1" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_Pos_erev1" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>Pos mech. [deg]</td>
-         <td><label id="lbl_pos_deg1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_pos_deg1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
-         <td>Speed FAST [krpm]</td>
-         <td><label id="lbl_speed_fast1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
-       </tr>
-       <tr>
-         <td>Speed Encoder [krpm]</td>
-         <td><label id="lbl_speed_qep1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>Speed [krpm]</td>
+         <td>
+          <label id="lbl_speed_qep1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>I<sub>q</sub> Ref [A]</td>
-         <td><label id="lbl_IqRef1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_IqRef1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>I<sub>q</sub> [A]</td>
@@ -85,7 +93,9 @@ require([
        </tr>
        <tr>
          <td>Torque [Nm]</td>
-         <td><label id="lbl_torque1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_torque1" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>Encoder Error [counts]</td>
@@ -103,7 +113,7 @@ require([
        Motor 2</h1>
      <input id="btn_runMotor2" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 2" visible="true" iconClass="dijitCheckBoxIcon">
  </input>
-       <p>         Status: ???</p>
+     <p>         Status: ???</p>
    <canvas id="widget_21391" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
    <canvas id="widget_9794" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
        <div style="border: 1px solid grey; padding: 1ex; background: white; font-size: 120%; margin-top: 1em; width: auto;">
@@ -112,8 +122,8 @@ require([
        <tr>
          <td>Pos_mrev</td>
          <td style="font-family: monospace; width: 8em;">
-           <label id="lbl_Pos_mrev2" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
-         </td>
+          <label id="lbl_Pos_mrev2" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>Pos_erev</td>
@@ -124,26 +134,28 @@ require([
          <td><label id="lbl_pos_deg2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
        </tr>
        <tr>
-         <td>Speed FAST [krpm]</td>
-         <td><label id="lbl_speed_fast2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
-       </tr>
-       <tr>
-         <td>Speed Encoder [krpm]</td>
-         <td><label id="lbl_speed_qep2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>Speed [krpm]</td>
+         <td>
+          <label id="lbl_speed_qep2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>I<sub>q</sub> Ref [A]</td>
-         <td><label id="lbl_IqRef2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_IqRef2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>I<sub>q</sub> [A]</td>
          <td>
-           <label id="lbl_Iq2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
-         </td>
+          <label id="lbl_Iq2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>Torque [Nm]</td>
-         <td><label id="lbl_torque2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label></td>
+         <td>
+          <label id="lbl_torque2" data-dojo-type="gc.dijit.Label" label="????" visible="true" style="font-family: monospace;"></label>
+        </td>
        </tr>
        <tr>
          <td>Encoder Error [counts]</td>
@@ -163,8 +175,12 @@ require([
 <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false">
  <div class="motor1">
   <h2>Motor 1</h2>
-  <canvas id="sld_speedRef1" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="green" visible="true" ondblclick="setZero(&quot;sld_speedRef1&quot;)"></canvas>
-  <input type="text" id="num_speedRef1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="0" style="margin: auto; width: 100px;"></input>
+  <canvas id="dial_speedRef1" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="green" visible="true" ondblclick="setZero(&quot;dial_speedRef1&quot;)"></canvas>
+  <div id="sld_speedRef1" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="width: auto;" pageIncrement="0.1">
+    <div id="widget_34136" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+    <ol id="widget_30181" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0%,50%,100%" container="bottomDecoration" style="height: 20px;"></ol>
+  </div>
+  <input type="text" id="num_speedRef1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" visible="true" style="margin: auto; width: 100px;" largeDelta="1"></input>
   <hr></hr>
   <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
     <colgroup>
@@ -173,19 +189,25 @@ require([
     </colgroup>
     <tbody>
       <tr>
-        <td>          max. Accel.</td>
-        <td><input type="text" id="num_maxAccel1" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          max. Accel. [krpm/s]</td>
+        <td>
+          <input type="text" id="num_maxAccel1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
       </tr>
       <tr>
-        <td>          max. Jerk</td>
-        <td><input type="text" id="num_maxJerk1" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          max. Jerk [krpm/s²]</td>
+        <td>
+          <input type="text" id="num_maxJerk1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
       </tr>
       <tr>
-        <td>          Bandwidth</td>
-        <td><input type="text" id="num_bandwidth1" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          Bandwidth</td>
+        <td>
+          <input type="text" id="num_bandwidth1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -193,32 +215,43 @@ require([
  <div class="vrule"></div>
   <div class="motor2">
   <h2>Motor 2</h2>
-  <canvas id="sld_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" unit="[krpm]" ondblclick="setZero(&quot;sld_speedRef2&quot;)"></canvas>
-    <input type="text" id="num_speedRef2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="0" style="margin: auto; width: 100px;"></input>
+    <canvas id="dial_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" ondblclick="setZero(&quot;dial_speedRef1&quot;)"></canvas>
+    <div id="sld_speedRef2" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" discreteValues="Infinity" visible="true" style="width: auto;" maximum="6">
+      <div id="widget_341362" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+      <ol id="widget_301812" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0%,50%,100%" container="bottomDecoration" style="height: 20px;"></ol>
+    </div>
+    <input type="text" id="num_speedRef2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="margin: auto; width: 100px;" value="0"></input>
   <hr></hr>
   <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
-    <colgroup>
+<colgroup>
       <col></col>
       <col></col>
     </colgroup>
     <tbody>
       <tr>
-        <td>          max. Accel.</td>
-        <td><input type="text" id="num_maxAccel2" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          max. Accel. [krpm/s]</td>
+        <td>
+          <input type="text" id="num_maxAccel2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
       </tr>
       <tr>
-        <td>          max. Jerk</td>
-        <td><input type="text" id="num_maxJerk2" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          max. Jerk [krpm/s²]</td>
+        <td>
+         <input type="text" id="num_maxJerk2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+       </td>
       </tr>
       <tr>
-        <td>          Bandwidth</td>
-        <td><input type="text" id="num_bandwidth2" data-dojo-type="gc.dijit.NumberSpinner" value="0" style="width: 100px;"></input>
-</td>
+        <td>
+          Bandwidth</td>
+        <td>
+          <input type="text" id="num_bandwidth2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
       </tr>
     </tbody>
   </table>
+  <canvas id="sld_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" unit="[krpm]" ondblclick="setZero(&quot;sld_speedRef2&quot;)"></canvas>
 </div>
 </div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Settings"></div>

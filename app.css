@@ -58,6 +58,7 @@ div#controls {
 	float: left;
 	width: 48%;
 	text-align: center;
+	margin: 0;
 }
 
 div.vrule {

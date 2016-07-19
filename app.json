@@ -1,5 +1,247 @@
-{"widgetBindings": [{
-    "propertyName": "maxSpeed",
-    "widgetId": "prop",
-    "options": {"dataType": "Double"}
-}]}
+{"widgetBindings": [
+    {
+        "propertyName": "maxSpeed",
+        "widgetId": "prop",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars[0].Flag_enableSys",
+        "widgetId": "widget_28123",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars[0].Flag_Run_Identify",
+        "widgetId": "btn_runMotor1",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars[1].Flag_Run_Identify",
+        "widgetId": "btn_runMotor2",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].Speed_krpm, 24)",
+        "widgetId": "widget_17931",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].Speed_krpm, 24)",
+        "widgetId": "widget_21391",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].Iq_A, 24)",
+        "widgetId": "widget_24586",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "minValue",
+        "serverBindName": "Q(gMotorVars[1].Iq_A, 24)",
+        "widgetId": "widget_9794",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].SpeedRef_krpm, 24)",
+        "widgetId": "dial_speedRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].SpeedRef_krpm, 24)",
+        "widgetId": "sld_speedRef2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].SpeedRef_krpm, 24)",
+        "widgetId": "num_speedRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].SpeedRef_krpm, 24)",
+        "widgetId": "num_speedRef2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].MaxAccel_krpmps, 24)",
+        "widgetId": "num_maxAccel1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].MaxAccel_krpmps, 24)",
+        "widgetId": "num_maxAccel2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].MaxJrk_krpmps2, 20)",
+        "widgetId": "num_maxJerk1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].MaxJrk_krpmps2, 20)",
+        "widgetId": "num_maxJerk2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].SpinTAC.VelCtlBw_radps, 20)",
+        "widgetId": "num_bandwidth1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].SpinTAC.VelCtlBw_radps, 20)",
+        "widgetId": "num_bandwidth2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[0].vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_Pos_mrev1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[1].vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_Pos_mrev2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[0].vel.conv.Pos_erev, 24)",
+        "widgetId": "lbl_Pos_erev1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[1].vel.conv.Pos_erev, 24)",
+        "widgetId": "lbl_Pos_erev2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[0].vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_pos_deg1",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj[1].vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_pos_deg2",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[0].Speed_krpm, 24)",
+        "widgetId": "lbl_speed_qep1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[1].Speed_krpm, 24)",
+        "widgetId": "lbl_speed_qep2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[0].Iq_A, 24)",
+        "widgetId": "lbl_Iq1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[1].Iq_A, 24)",
+        "widgetId": "lbl_Iq2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[0].IqRef_A, 24)",
+        "widgetId": "lbl_IqRef1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[1].IqRef_A, 24)",
+        "widgetId": "lbl_IqRef2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[0].Torque_Nm, 24)",
+        "widgetId": "lbl_torque1",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars[1].Torque_Nm, 24)",
+        "widgetId": "lbl_torque2",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.4f"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].SpeedRef_krpm, 24)",
+        "widgetId": "sld_speedRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].SpeedRef_krpm, 24)",
+        "widgetId": "dial_speedRef2",
+        "options": {"dataType": "Double"}
+    }
+]}
