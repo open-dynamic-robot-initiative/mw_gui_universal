@@ -44,11 +44,35 @@ div#body {
 	float: left;
 	width: 26%;
 	height: 500px;
-	border: 1px solid grey;
-	margin-right: 1%;
+	border-right: 1px solid grey;
+	padding-right: 0.5%;
+	margin-right: 0.5%;
 }
 
 div#controls {
 	float: left;
 	width: 45%;
+}
+
+#controls div.motor1, #controls div.motor2 {
+	float: left;
+	width: 48%;
+	text-align: center;
+}
+
+div.vrule {
+	float: left;
+	border-left: 1px solid grey;
+	width: 0;
+	height: 100%;
+	margin-left: 1%;
+	padding-left: 1%;
+}
+
+.motor1 h1, .motor1 h2 {
+	border-bottom: 3px solid green;
+}
+
+.motor2 h1, .motor2 h2 {
+	border-bottom: 3px solid blue;
 }

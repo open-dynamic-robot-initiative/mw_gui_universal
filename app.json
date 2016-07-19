@@ -1,1 +1,5 @@
-{"widgetBindings": []}
+{"widgetBindings": [{
+    "propertyName": "maxSpeed",
+    "widgetId": "prop",
+    "options": {"dataType": "Double"}
+}]}

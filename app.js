@@ -8,3 +8,9 @@ require(["dojo/ready"], function(ready){
 
      });
 });
+
+
+function setZero(elementId)
+{
+	dijit.byId(elementId).set("value", 0);
+}
