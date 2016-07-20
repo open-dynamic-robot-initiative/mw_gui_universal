@@ -261,5 +261,53 @@
             "dataType": "String",
             "inPreProcessingFunction": "convertEstStateToString"
         }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "$maxSpeed",
+        "widgetId": "widget_6286",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "$maxSpeed",
+        "widgetId": "widget_7678",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].IqRef_A, 24)",
+        "widgetId": "dial_IqRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].IqRef_A, 24)",
+        "widgetId": "sld_IqRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[0].IqRef_A, 24)",
+        "widgetId": "num_IqRef1",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].IqRef_A, 24)",
+        "widgetId": "dial_IqRef2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].IqRef_A, 24)",
+        "widgetId": "sld_IqRef2",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].IqRef_A, 24)",
+        "widgetId": "num_IqRef2",
+        "options": {"dataType": "Double"}
     }
 ]}

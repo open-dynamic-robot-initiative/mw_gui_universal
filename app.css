@@ -37,7 +37,7 @@ html, body {
 
 div#body {
 	width: 1200px;
-	height: 800px;
+	height: auto;
 }
 
 .motor_monitor {

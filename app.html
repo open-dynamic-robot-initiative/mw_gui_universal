@@ -171,7 +171,64 @@ require([
 
  <div id="controls">
  <span data-dojo-type="dijit.layout.TabContainer" style="min-width: 1em; min-height: 1em; width: 100%; height: 500px;" controllerWidget="dijit.layout.TabController">
-<div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" doLayout="false"></div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" doLayout="false">
+
+ <div class="motor1">
+  <h2>
+    Motor J1</h2>
+  <span>Goal Current I<sub>q</sub> [A]</span>
+  <canvas id="dial_IqRef1" data-dojo-type="gc.dijit.Dial" title="Current Iq" unit="[A]" size="150" minValue="-9" maxValue="9" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="green" visible="true" tooltip="Double-click to set to zero" ondblclick="setZero(&quot;dial_IqRef1&quot;)"></canvas>
+  <div id="sld_IqRef1" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="9" discreteValues="Infinity" pageIncrement="0.1" visible="true" style="width: auto;">
+    <ol id="widget_30182341" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0,4.5,9" container="bottomDecoration" style="height: 20px;" count="3" numericMargin="0"></ol>
+    <div id="widget_34132346" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+  </div>
+  <input type="text" id="num_IqRef1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" visible="true" style="margin: auto; width: 100px;" largeDelta="1"></input>
+  <hr></hr>
+  <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
+    <colgroup>
+      <col></col>
+      <col></col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>foobar</td>
+        <td>
+          <input type="text" id="num_foobar1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+ <div class="vrule"></div>
+  <div class="motor2">
+  <h2>
+    Motor J5</h2>
+  <span>Goal Current I<sub>q</sub> [A]</span>
+    <canvas id="dial_IqRef2" data-dojo-type="gc.dijit.Dial" title="Current Iq" unit="[A]" size="150" minValue="-9" maxValue="9" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" tooltip="Double-click to set to zero" ondblclick="setZero(&quot;dial_IqRef2&quot;)"></canvas>
+    <div id="sld_IqRef2" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="9" discreteValues="Infinity" visible="true" style="width: auto;">
+      <ol id="widget_30181276" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0,4.5,9" container="bottomDecoration" style="height: 20px;" count="3" numericMargin="0"></ol>
+      <div id="widget_34136342" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+    </div>
+    <input type="text" id="num_IqRef2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="margin: auto; width: 100px;" value="0"></input>
+  <hr></hr>
+  <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
+<colgroup>
+      <col></col>
+      <col></col>
+    </colgroup>
+    <tbody>
+      <tr>
+        <td>
+         foobar</td>
+        <td>
+          <input type="text" id="num_foobar2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="width: 100px;"></input>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false">
  <div class="motor1">
   <h2>
@@ -255,10 +312,12 @@ require([
       </tr>
     </tbody>
   </table>
-  <canvas id="sld_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" unit="[krpm]" ondblclick="setZero(&quot;sld_speedRef2&quot;)"></canvas>
 </div>
 </div>
-<div data-dojo-type="dijit.layout.ContentPane" title="Settings"></div>
+<div data-dojo-type="dijit.layout.ContentPane" title="Settings">
+ <input type="text" id="widget_6286" data-dojo-type="gc.dijit.NumberSpinner" value="0"></input>
+ <label id="widget_7678" data-dojo-type="gc.dijit.Label" label="Label" visible="true"></label>
+</div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Export"></div>
 </span>
  </div>
