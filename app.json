@@ -41,12 +41,6 @@
         "options": {"dataType": "Double"}
     },
     {
-        "propertyName": "minValue",
-        "serverBindName": "Q(gMotorVars[1].Iq_A, 24)",
-        "widgetId": "widget_9794",
-        "options": {"dataType": "Double"}
-    },
-    {
         "propertyName": "value",
         "serverBindName": "Q(gMotorVars[0].SpeedRef_krpm, 24)",
         "widgetId": "dial_speedRef1",
@@ -243,5 +237,29 @@
         "serverBindName": "Q(gMotorVars[1].SpeedRef_krpm, 24)",
         "widgetId": "dial_speedRef2",
         "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars[1].Iq_A, 24)",
+        "widgetId": "widget_9794",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gMotorVars[0].EstState",
+        "widgetId": "lbl_estState1",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "convertEstStateToString"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gMotorVars[0].EstState",
+        "widgetId": "lbl_estState2",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "convertEstStateToString"
+        }
     }
 ]}

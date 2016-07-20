@@ -45,11 +45,11 @@ require([
 <div style="background: lightgrey; padding: 1em;">
  <div id="monitor_motor1" class="motor_monitor motor1">
    <h1>
-   Motor 1</h1>
-   <input id="btn_runMotor1" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 1" visible="true" iconClass="dijitCheckBoxIcon">
+     Motor J1</h1>
+   <input id="btn_runMotor1" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor J1" visible="true" iconClass="dijitCheckBoxIcon">
  </input>
-   <p>
-       Status: ???</p>
+   <span style="margin-left: 2em; font-weight: bold;">Status: <label id="lbl_estState1" data-dojo-type="gc.dijit.Label" label="????" visible="true"></label>
+</span><br/><br/>
    <canvas id="widget_17931" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="green" visible="true" style="height: 150px; width: 150px;"></canvas>
    <canvas id="widget_24586" data-dojo-type="gc.dijit.DigitalGauge" title="Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="green" visible="true" style="width: 150px; height: 150px;"></canvas>
    <div style="border: 1px solid grey; padding: 1ex; background: white; font-size: 120%; margin-top: 1em; width: auto;">
@@ -110,12 +110,12 @@ require([
 
    <div id="monitor_motor2" class="motor_monitor motor2">
      <h1>
-       Motor 2</h1>
-     <input id="btn_runMotor2" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor 2" visible="true" iconClass="dijitCheckBoxIcon">
+       Motor J5</h1>
+     <input id="btn_runMotor2" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Motor J5" visible="true" iconClass="dijitCheckBoxIcon">
  </input>
-     <p>         Status: ???</p>
+   <span style="margin-left: 2em; font-weight: bold;">Status: <label id="lbl_estState2" data-dojo-type="gc.dijit.Label" label="????" visible="true"></label></span><br/><br/>
    <canvas id="widget_21391" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="[krpm]" lcdVisible="false" size="150" minValue="-8" maxValue="8" value="0" thresholdValue="7" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="tiltedGray" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
-   <canvas id="widget_9794" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
+   <canvas id="widget_9794" data-dojo-type="gc.dijit.DigitalGauge" title="Current Iq" unit="[A]" lcdVisible="true" size="150" minValue="-10" maxValue="10" value="0" thresholdValue="9" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="anthracite" backgroundDesign="blue" visible="true" style="width: 150px; height: 150px;"></canvas>
        <div style="border: 1px solid grey; padding: 1ex; background: white; font-size: 120%; margin-top: 1em; width: auto;">
  <table style="width: 100%; height: auto;" cellspacing="5">
      <tbody>
@@ -174,11 +174,13 @@ require([
 <div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" closable="false" doLayout="false"></div>
 <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl." extractContent="false" preventCache="false" preload="false" refreshOnShow="false" selected="true" closable="false" doLayout="false">
  <div class="motor1">
-  <h2>Motor 1</h2>
-  <canvas id="dial_speedRef1" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="green" visible="true" ondblclick="setZero(&quot;dial_speedRef1&quot;)"></canvas>
-  <div id="sld_speedRef1" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="width: auto;" pageIncrement="0.1">
+  <h2>
+    Motor J1</h2>
+  <span>Goal Speed [krpm]</span>
+  <canvas id="dial_speedRef1" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="green" visible="true" tooltip="Double-click to set to zero" ondblclick="setZero(&quot;dial_speedRef1&quot;)"></canvas>
+  <div id="sld_speedRef1" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="7" discreteValues="Infinity" pageIncrement="0.1" visible="true" style="width: auto;">
+    <ol id="widget_30181" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0,3.5,7" container="bottomDecoration" style="height: 20px;" count="3" numericMargin="0"></ol>
     <div id="widget_34136" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
-    <ol id="widget_30181" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0%,50%,100%" container="bottomDecoration" style="height: 20px;"></ol>
   </div>
   <input type="text" id="num_speedRef1" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" visible="true" style="margin: auto; width: 100px;" largeDelta="1"></input>
   <hr></hr>
@@ -214,11 +216,13 @@ require([
 </div>
  <div class="vrule"></div>
   <div class="motor2">
-  <h2>Motor 2</h2>
-    <canvas id="dial_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" ondblclick="setZero(&quot;dial_speedRef1&quot;)"></canvas>
-    <div id="sld_speedRef2" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" discreteValues="Infinity" visible="true" style="width: auto;" maximum="6">
+  <h2>
+    Motor J5</h2>
+  <span>Goal Speed [krpm]</span>
+    <canvas id="dial_speedRef2" data-dojo-type="gc.dijit.Dial" title="Speed" unit="[krpm]" size="150" minValue="-7" maxValue="7" setValueOnDrag="false" value="0" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="transparent" dialDesign="blue" visible="true" tooltip="Double-click to set to zero" ondblclick="setZero(&quot;dial_speedRef2&quot;)"></canvas>
+    <div id="sld_speedRef2" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="7" discreteValues="Infinity" visible="true" style="width: auto;">
+      <ol id="widget_301812" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0,3.5,7" container="bottomDecoration" style="height: 20px;" count="3" numericMargin="0"></ol>
       <div id="widget_341362" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
-      <ol id="widget_301812" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0%,50%,100%" container="bottomDecoration" style="height: 20px;"></ol>
     </div>
     <input type="text" id="num_speedRef2" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="margin: auto; width: 100px;" value="0"></input>
   <hr></hr>
