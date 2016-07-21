@@ -75,3 +75,12 @@ function convertEstStateToString(state)
 	
 	return state_names[state];
 }
+
+//! make sure spring stiffnes value is a positive number.
+function validateVirtualSpringStiffness(value)
+{
+	if (isNaN(value) || value < 0)
+		return 0;
+	else
+		return value;
+}

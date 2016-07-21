@@ -309,5 +309,96 @@
         "serverBindName": "Q(gMotorVars[1].IqRef_A, 24)",
         "widgetId": "num_IqRef2",
         "options": {"dataType": "Double"}
+    },
+
+
+    {
+        "propertyName": "checked",
+        "serverBindName": "spring[0].enabled",
+        "widgetId": "btn_enableSpring1",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "spring[0].stiffness",
+        "widgetId": "num_springStiffness1",
+        "options": {
+            "dataType": "Double",
+            "outPreProcessingFunction": "validateVirtualSpringStiffness"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(spring[0].deflection, 24)",
+        "widgetId": "lbl_springDeflection1",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(spring[0].maxCurrentRef, 24)",
+        "widgetId": "num_springMaxIq1",
+        "options": {
+            "dataType": "Double",
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "spring[0].flagResetOffset",
+        "widgetId": "btn_resetSpring1",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(spring[0].equilibriumPosition, 24)",
+        "widgetId": "sld_springOffset1",
+        "options": {"dataType": "Double"}
+    },
+
+    {
+        "propertyName": "checked",
+        "serverBindName": "spring[1].enabled",
+        "widgetId": "btn_enableSpring2",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "spring[1].stiffness",
+        "widgetId": "num_springStiffness2",
+        "options": {
+            "dataType": "Double",
+            "outPreProcessingFunction": "validateVirtualSpringStiffness"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(spring[1].deflection, 24)",
+        "widgetId": "lbl_springDeflection2",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(spring[1].maxCurrentRef, 24)",
+        "widgetId": "num_springMaxIq2",
+        "options": {
+            "dataType": "Double",
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "spring[1].flagResetOffset",
+        "widgetId": "btn_resetSpring2",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(spring[1].equilibriumPosition, 24)",
+        "widgetId": "sld_springOffset2",
+        "options": {"dataType": "Double"}
     }
 ]}
