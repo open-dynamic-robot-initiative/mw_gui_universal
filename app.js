@@ -1,7 +1,10 @@
-/*
+/* GUI Lab02b (and more...)
+ * 
  * This file is provided for custom JavaScript logic that your HTML files might need.
  * GUI Composer includes this JavaScript file by default within HTML pages authored in GUI Composer.
  */
+var debug_label;
+
 require(["dojo/ready"], function(ready){
      ready(function(){
          // logic that requires that Dojo is fully initialized should go here
@@ -10,11 +13,7 @@ require(["dojo/ready"], function(ready){
 			 dijit.byId('tgl_runMotor').set('label', val);
 		 });
 		 
-		 
-		 
-
-		 
-		 
+		 debug_label = dijit.byId('lbl_debug');
 
 		 // setup all speed instruments to given max. speed.
 		 changeMaxSpeed();
@@ -97,6 +96,7 @@ function validateNumber(value) {
 	return isNaN(value) ? 0 : value;
 }
 
+
 function validateVirtualSpringStiffness(value) {
 	if (isNaN(value) || value < 0)
 		return 0;
@@ -110,16 +110,58 @@ function onChangeVirtualSpringMode() {
 	dijit.byId("sld_IqRef").set("disabled", is_vs_on);
 }
 
-function preproc_sld_IqRef( valueFromTarget) {
-	if (dijit.byId("chk_IqRefRevert").get("checked"))
-		return -valueFromTarget;
-	else
-		return valueFromTarget;
-}
 
 function postproc_sld_IqRef( valueToTarget) {
-	if (dijit.byId("chk_IqRefRevert").get("checked"))
+	if (dijit.byId("chk_IqRefRevert").get("checked")) {
+		debug_label.set("label", -valueToTarget);
 		return -valueToTarget;
-	else
+	} else {
+		debug_label.set("label", valueToTarget);
 		return valueToTarget;
+	}
 }
+
+function abs(valueFromTarget) {
+	return Math.abs(valueFromTarget);
+}
+
+
+/////////////////////////////////
+
+var FI = undefined;
+
+function getDataFromBoard(name) {
+	//debug_label.set("label", $TI.GUIVars.getStatus("test"));
+	var data = $TI.GUIVars.getValue("test");
+	var qbase = dijit.byId("spn_exportQValue").get("value");
+
+	// convert Q-value to float
+	data = data.map(function(x) {return qToFloat(x, qbase);});
+	
+	return data;
+}
+
+function exportValue() {
+	var name = dijit.byId("txt_exportVarName").get("value");
+	var data = getDataFromBoard(name);
+	var callback = function(fileInfo, errorInfo) {
+		if(errorInfo) {
+			$TI.helper.showError("Save as...", errorInfo.message);
+		} else {
+			FI = fileInfo;
+			updateFileName();
+		}
+	};
+	var options = {
+		clientLocation : 'auto'
+	}
+
+	options.addCRAfter = true;
+	new TI.CSVFile().browseAndSave(data, FI, options, callback);
+}
+
+function qToFloat(value, qbase) {
+	return value / Math.pow(2.0, qbase);
+}
+
+

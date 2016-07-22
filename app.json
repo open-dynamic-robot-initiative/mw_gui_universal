@@ -120,7 +120,7 @@
         "options": {
             "dataType": "Double",
             "outPreProcessingFunction": "postproc_sld_IqRef",
-            "inPreProcessingFunction": "preproc_sld_IqRef"
+            "inPreProcessingFunction": "abs"
         }
     },
     {
@@ -302,5 +302,23 @@
         "serverBindName": "Q(gVirtualSpring.equilibriumPosition, 24)",
         "widgetId": "widget_1753",
         "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gIndexPositionError_count",
+        "widgetId": "widget_5865",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "data",
+        "serverBindName": "gIqLog",
+        "widgetId": "widget_4639",
+        "options": {"dataType": "Array"}
+    },
+    {
+        "propertyName": "test",
+        "serverBindName": "gIqLog",
+        "widgetId": "prop",
+        "options": {"dataType": "Array"}
     }
 ]}
