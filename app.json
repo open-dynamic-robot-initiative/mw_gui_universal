@@ -246,21 +246,15 @@
     },
     {
         "propertyName": "label",
-        "serverBindName": "gMotorVars[0].EstState",
-        "widgetId": "lbl_estState1",
-        "options": {
-            "dataType": "String",
-            "inPreProcessingFunction": "convertEstStateToString"
-        }
+        "serverBindName": "",
+        "widgetId": "lbl_alignMotor1",
+        "options": {}
     },
     {
         "propertyName": "label",
-        "serverBindName": "gMotorVars[0].EstState",
-        "widgetId": "lbl_estState2",
-        "options": {
-            "dataType": "String",
-            "inPreProcessingFunction": "convertEstStateToString"
-        }
+        "serverBindName": "",
+        "widgetId": "lbl_alignMotor2",
+        "options": {}
     },
     {
         "propertyName": "value",
@@ -310,8 +304,6 @@
         "widgetId": "num_IqRef2",
         "options": {"dataType": "Double"}
     },
-
-
     {
         "propertyName": "checked",
         "serverBindName": "spring[0].enabled",
@@ -340,9 +332,7 @@
         "propertyName": "value",
         "serverBindName": "Q(spring[0].maxCurrentRef, 24)",
         "widgetId": "num_springMaxIq1",
-        "options": {
-            "dataType": "Double",
-        }
+        "options": {"dataType": "Double"}
     },
     {
         "propertyName": "value",
@@ -356,7 +346,6 @@
         "widgetId": "sld_springOffset1",
         "options": {"dataType": "Double"}
     },
-
     {
         "propertyName": "checked",
         "serverBindName": "spring[1].enabled",
@@ -385,9 +374,7 @@
         "propertyName": "value",
         "serverBindName": "Q(spring[1].maxCurrentRef, 24)",
         "widgetId": "num_springMaxIq2",
-        "options": {
-            "dataType": "Double",
-        }
+        "options": {"dataType": "Double"}
     },
     {
         "propertyName": "value",
@@ -400,5 +387,23 @@
         "serverBindName": "Q(spring[1].equilibriumPosition, 24)",
         "widgetId": "sld_springOffset2",
         "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "alignMotor1",
+        "serverBindName": "gMotorVars[0].Flag_enableAlignment",
+        "widgetId": "prop",
+        "options": {
+            "onPropertyChanged": "onAlignMotor1PropertyChanged",
+            "dataType": "Boolean"
+        }
+    },
+    {
+        "propertyName": "alignMotor2",
+        "serverBindName": "gMotorVars[1].Flag_enableAlignment",
+        "widgetId": "prop",
+        "options": {
+            "onPropertyChanged": "onAlignMotor2PropertyChanged",
+            "dataType": "Boolean"
+        }
     }
 ]}
