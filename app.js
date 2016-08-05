@@ -131,13 +131,27 @@ function abs(valueFromTarget) {
 var FI = undefined;
 
 function getDataFromBoard(name) {
-	//debug_label.set("label", $TI.GUIVars.getStatus("test"));
+	// First bind the GUI variable to the name specified in the text box (for
+	// now, only arrays are supported).
+	var bindname = dijit.byId("txt_exportVarName").get("value");
+	$TI.helper.log("Bind 'test' to " + bindname, "app.js");
+	//$TI.guiComposerServer.addBinding("prop", "test", bindname,
+	//		{"dataType": "Array"});
+	$TI.guiComposerServer._bindings.getBind("prop", "test").serverBindName = bindname;
+
+	// Now get the value
 	var data = $TI.GUIVars.getValue("test");
+//	if (data == null) {
+//		$TI.helper.showError("Invalid Binding",
+//				"Could not bind to the specified variable. Are you sure it exits?");
+//		return null;
+//	}
+
 	var qbase = dijit.byId("spn_exportQValue").get("value");
 
 	// convert Q-value to float
 	data = data.map(function(x) {return qToFloat(x, qbase);});
-	
+
 	return data;
 }
 
@@ -165,3 +179,20 @@ function qToFloat(value, qbase) {
 }
 
 
+var logposlog = "0";
+
+function onLogposPropertyChanged( propertyName, newValue, oldValue) {
+	// var t = $TI.GUIVars;
+	// get value from another GUI variable
+	// var v2 = t.getValue('prop2');
+	// var v3 = newValue + v2;
+	//
+	// set value to another GUI variable
+	// t.setValue('prop3', v3);
+	//
+	// set value to a widget
+	// dijit.byId('widget1').set('checked', v3);
+
+	logposlog += "," + $TI.GUIVars.getValue("logpos");
+	debug_label.set("label", logposlog);
+}

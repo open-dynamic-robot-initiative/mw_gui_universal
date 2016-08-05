@@ -317,8 +317,29 @@
     },
     {
         "propertyName": "test",
-        "serverBindName": "gIqLog",
+        "serverBindName": "gDataLogIc",
         "widgetId": "prop",
         "options": {"dataType": "Array"}
+    },
+    {
+        "propertyName": "logpos",
+        "serverBindName": "gLogIndex",
+        "widgetId": "prop",
+        "options": {
+            "dataType": "Long",
+            "onPropertyChanged": "onLogposPropertyChanged"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gLogIndex",
+        "widgetId": "widget_28525",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "progress",
+        "serverBindName": "gLogIndex",
+        "widgetId": "widget_29085",
+        "options": {"dataType": "number"}
     }
 ]}
