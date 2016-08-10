@@ -393,8 +393,8 @@
         "serverBindName": "gMotorVars[0].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "onPropertyChanged": "onAlignMotor1PropertyChanged",
-            "dataType": "Boolean"
+            "dataType": "Boolean",
+            "onPropertyChanged": "onAlignMotor1PropertyChanged"
         }
     },
     {
@@ -402,8 +402,14 @@
         "serverBindName": "gMotorVars[1].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "onPropertyChanged": "onAlignMotor2PropertyChanged",
-            "dataType": "Boolean"
+            "dataType": "Boolean",
+            "onPropertyChanged": "onAlignMotor2PropertyChanged"
         }
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gUseHwSlider",
+        "widgetId": "widget_6452",
+        "options": {"dataType": "Boolean"}
     }
 ]}
