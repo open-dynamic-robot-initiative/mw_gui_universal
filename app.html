@@ -52,386 +52,398 @@ require([
 <script type="text/javascript" src="lib/davinci.gc_1_5/WebContent/gc/backplane/guiComposer.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </head>
-<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="true" data-maq-comptype="desktop" data-maq-appstates="{}" id="myapp">
+<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="false" data-maq-comptype="desktop" id="myapp" data-maq-appstates="{}">
 
 <div id="widget_1" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="background: grey; text-align: center; width: 1050px;">
-<label id="widget_2" data-dojo-type="gc.dijit.Label" label="Motor Identification &amp; Test GUI" visible="true" style="color: #ffffff; font-size: 2em;"></label>
+ <label id="widget_2" data-dojo-type="gc.dijit.Label" label="Motor Identification &amp; Test GUI" visible="true" style="color: #ffffff; font-size: 2em;"></label>
 </div>
 <div id="widget_6" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="background-color: #dfdcdc; height: auto; width: 1050px;">
-  <div style="width: 100%">
-    <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
-    <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
-    <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true" style="margin-right: 1ex; margin-left: 2em;"></label>
-    <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ???" visible="true"></label>
-    <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
-  </div>
+ <div style="width: 100%">
+  <input id="widget_18276" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Enable System" visible="true" iconClass="dijitCheckBoxIcon"></input>
+  <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
+  <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true" style="margin-right: 1ex; margin-left: 2em;"></label>
+  <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ???" visible="true"></label>
+  <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
+ </div>
 
-  <span data-dojo-type="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; height: 428px; width: 470px;" class="floatleft">
-<div data-dojo-type="dijit.layout.ContentPane" title="Motor ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" style="float: left;">
-    <p style="margin: 0.5em;">
+ <span data-dojo-type="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; height: 428px; width: 470px;" class="floatleft">
+  <div data-dojo-type="dijit.layout.ContentPane" title="Motor ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false" style="float: left;">
+   <p style="margin: 0.5em;">
+
+
+
       
       
       
       
-      
-      
-      
-      Motor and inverter parameter identification. Use lab02b for this.</p><span id="widget_19617" data-dojo-type="gc.dijit.TitlePane" title="Motor Parameters" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; z-index: 900; width: 400px; margin-top: 1em;"><table style="width: 100%;">
-      <tbody>
-        <tr>
-          <td>
+			Motor and inverter parameter identification. Use lab02b for this.</p><span id="widget_19617" data-dojo-type="gc.dijit.TitlePane" title="Motor Parameters" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; z-index: 900; width: 400px; margin-top: 1em;"><table style="width: 100%;">
+     <tbody>
+     <tr>
+      <td>
             
             
             
             
-            
-            
-            
-            USER_MOTOR_Rr</td>
-          <td>
-            <input id="widget_26548" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
-            
-            
-            
-            
-            
-            
-            USER_MOTOR_Rs</td>
-          <td>
-            <input id="widget_25384" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
+
+
+
+							USER_MOTOR_Rr</td>
+      <td>
+       <input id="widget_26548" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
+
+
+
             
             
             
             
-            
-            
-            
-            USER_MOTOR_Ls_d</td>
-          <td>
-            <input id="widget_15410" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
+							USER_MOTOR_Rs</td>
+      <td>
+       <input id="widget_25384" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
             
             
             
             
+
+
+
+							USER_MOTOR_Ls_d</td>
+      <td>
+       <input id="widget_15410" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
+
+
+
             
             
-            USER_MOTOR_Ls_q</td>
-          <td>
-            <input id="widget_9280" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
+            
+            
+							USER_MOTOR_Ls_q</td>
+      <td>
+       <input id="widget_9280" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
             
             
             
             
-            
-            
-            
-            USER_MOTOR_RATED_FLUX</td>
-          <td>
-            <input id="widget_15281" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-      </tbody>
+
+
+
+							USER_MOTOR_RATED_FLUX</td>
+      <td>
+       <input id="widget_15281" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     </tbody>
     </table>
-    </span><span id="widget_7102" data-dojo-type="gc.dijit.TitlePane" title="Inverter Offsets" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; width: 400px; margin-top: 1em;"><table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
-      <colgroup>
-        <col></col>
-        <col></col>
-      </colgroup>
-      <tbody>
-        <tr>
-          <td>
+   </span><span id="widget_7102" data-dojo-type="gc.dijit.TitlePane" title="Inverter Offsets" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" duration="200" open="true" visible="true" style="min-width: 1em; width: 400px; margin-top: 1em;"><table style="border-collapse: collapse; table-layout: fixed; width: 100%;">
+     <colgroup>
+      <col></col>
+      <col></col>
+     </colgroup>
+     <tbody>
+     <tr>
+      <td>
+
+
+
             
             
             
             
-            
-            
-            
-            I_A_offset</td>
-          <td>
-            <input id="txt_I_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
+							I_A_offset</td>
+      <td>
+       <input id="txt_I_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
             
             
             
             
-            
-            
-            I_B_offset</td>
-          <td>
-            <input id="txt_I_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
-            
-            
-            
-            
-            
-            
-            I_C_offset</td>
-          <td>
-            <input id="txt_I_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
+
+
+
+							I_B_offset</td>
+      <td>
+       <input id="txt_I_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
+
+
+
             
             
             
             
-            
-            
-            
-            V_A_offset</td>
-          <td>
-            <input id="txt_V_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
+							I_C_offset</td>
+      <td>
+       <input id="txt_I_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
             
             
             
             
+
+
+
+							V_A_offset</td>
+      <td>
+       <input id="txt_V_A_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
+
+
+
             
             
-            V_B_offset</td>
-          <td>
-            <input id="txt_V_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
+            
+            
+							V_B_offset</td>
+      <td>
+       <input id="txt_V_B_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     <tr>
+      <td>
             
             
             
             
-            
-            
-            
-            V_C_offset</td>
-          <td>
-            <input id="txt_V_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-      </tbody>
+
+
+
+							V_C_offset</td>
+      <td>
+       <input id="txt_V_C_offset" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+      </td>
+     </tr>
+     </tbody>
     </table>
-    </span>
+   </span>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Inertia ID" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
-    <p>
+   <p>
+
+
+
       
       
       
       
-      
-      
-      
-      Inertia Identification of the system. Use lab12a for this.</p>
-    <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
-      <colgroup>
-        <col></col>
-        <col></col>
-      </colgroup>
-      <tbody>
-        <tr>
-          <td>
+			Inertia Identification of the system. Use lab12a for this.</p>
+   <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
+    <colgroup>
+     <col></col>
+     <col></col>
+    </colgroup>
+    <tbody>
+    <tr>
+     <td>
+
+
+
             
             
             
             
-            
-            
-            
-            Goal Speed [krpm]</td>
-          <td>
-            <input type="text" id="widget_31340" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
-            
+						Goal Speed [krpm]</td>
+     <td>
+      <input type="text" id="widget_31340" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
+     </td>
+    </tr>
+    <tr>
+     <td>
+
+
+
             
             
             
             
-            
-            Torque Ramp Time [sec]</td>
-          <td>
-            <input type="text" id="widget_6034" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+						Torque Ramp Time [sec]</td>
+     <td>
+      <input type="text" id="widget_6034" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
+     </td>
+    </tr>
+    </tbody>
+   </table>
     <input id="widget_22019" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Run Inertia ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
-    <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
-      <colgroup>
-        <col></col>
-        <col></col>
-      </colgroup>
-      <tbody>
-        <tr>
-          <td>
+   <table border="0" style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto; margin: 1em 0;">
+    <colgroup>
+     <col></col>
+     <col></col>
+    </colgroup>
+    <tbody>
+    <tr>
+     <td>
             
             
             
             
-            
-            
-            
-            USER_SYSTEM_INERTIA</td>
-          <td>
-            <input id="widget_18009" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
-            
-            
-            
-            
-            
-            
-            USER_SYSTEM_FRICTION</td>
-          <td>
-            <input id="widget_3467" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
+
+
+
+						USER_SYSTEM_INERTIA</td>
+     <td>
+      <input id="widget_18009" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+     </td>
+    </tr>
+    <tr>
+     <td>
+
+
+
             
             
             
             
+						USER_SYSTEM_FRICTION</td>
+     <td>
+      <input id="widget_3467" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="true" visible="true"></input>
+     </td>
+    </tr>
+    <tr>
+     <td>
             
             
             
-            SpinTAC.VelIdErrorID</td>
-          <td>
-            <input id="widget_19405" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" readOnly="true"></input>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <label id="widget_25723" data-dojo-type="gc.dijit.Label" label="If Error ID is not 0, please refer to the labs Users's Guide or document SPRUHJ1F for the meaning of the different error codes." visible="true"></label>
+            
+
+
+
+						SpinTAC.VelIdErrorID</td>
+     <td>
+      <input id="widget_19405" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" readOnly="true"></input>
+     </td>
+    </tr>
+    </tbody>
+   </table>
+   <label id="widget_25723" data-dojo-type="gc.dijit.Label" label="If Error ID is not 0, please refer to the labs Users's Guide or document SPRUHJ1F for the meaning of the different error codes." visible="true"></label>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Speed Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="true" closable="false">
-    <div id="sld_speedRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="position: absolute; z-index: 900; left: 56px; top: 48px; height: 286px;">
-      <div id="widget_18273" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
-      <ol id="sldlbl_speedRef" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
-    </div>
-    <label style="position: absolute; z-index: 900; left: 32px; top: 16px;">
+   <div id="sld_speedRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="6" discreteValues="Infinity" visible="true" style="position: absolute; z-index: 900; left: 56px; top: 48px; height: 286px;">
+    <div id="widget_18273" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
+    <ol id="sldlbl_speedRef" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
+   </div>
+   <label style="position: absolute; z-index: 900; left: 32px; top: 16px;">
+
+
+
       
       
       
       
-      
-      
-      
-      Speed Reference [krpm]</label>
+				Speed Reference [krpm]</label>
     <input type="text" id="widget_34152" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="position: absolute; z-index: 900; width: 64.109375px; left: 49.4453125px; top: 347px;" value="0"></input>
-    <input type="text" id="widget_30148" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="position: absolute; z-index: 900; left: 314px; top: 49px; width: 83.109375px;"></input>
-    <label id="widget_6005" data-dojo-type="gc.dijit.Label" label="Max. Acceleration:" visible="true" style="position: absolute; z-index: 900; left: 173px; top: 53px;"></label>
+   <input type="text" id="widget_30148" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" style="position: absolute; z-index: 900; left: 314px; top: 49px; width: 83.109375px;"></input>
+   <label id="widget_6005" data-dojo-type="gc.dijit.Label" label="Max. Acceleration:" visible="true" style="position: absolute; z-index: 900; left: 173px; top: 53px;"></label>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Torque Ctrl" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" closable="false">
-    <div style="float: left; height: 346px;">
-      <input id="chk_IqRefRevert" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Revert direction" iconClass="dijitNoIcon" disabled="true" visible="true"></input>
-      <label id="widget_30963" data-dojo-type="gc.dijit.Label" label="Iq Ref." visible="true"></label>
-      <div id="sld_IqRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="9" discreteValues="Infinity" visible="true" style="height: 325px;">
-        <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
-        <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0%,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
-      </div>
-      <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="width: 87.109375px;" value="0"></input>
+   <div style="float: left; height: 346px;">
+    <input id="chk_IqRefRevert" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Revert direction" iconClass="dijitNoIcon" disabled="true" visible="true"></input>
+    <label id="widget_30963" data-dojo-type="gc.dijit.Label" label="Iq Ref." visible="true"></label>
+    <div id="sld_IqRef" data-dojo-type="gc.dijit.VerticalSlider" intermediateChanges="false" maximum="9" discreteValues="Infinity" visible="true" style="height: 325px;">
+     <div id="widget_33165" data-dojo-type="gc.dijit.VerticalRule" container="rightDecoration" style="width: 5px;"></div>
+     <ol id="widget_22542" data-dojo-type="gc.dijit.VerticalRuleLabels" labels="0%,50%,100%" container="rightDecoration" style="width: 3em;"></ol>
     </div>
-    <div data-dojo-type="dijit.layout.ContentPane" title="Pane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" style="height: auto; width: auto; text-align: center;">
-      <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="-10" maxValue="10" value="0" thresholdValue="1" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin-bottom: 1em;"></canvas>
+      <input type="text" id="widget_2398" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" smallDelta="0.1" largeDelta="1" visible="true" style="width: 87.109375px;" value="0"></input>
+   </div>
+   <div data-dojo-type="dijit.layout.ContentPane" title="Pane" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" style="height: auto; width: auto; text-align: center;">
+    <canvas id="widget_27875" data-dojo-type="gc.dijit.AnalogGauge" title="Current Iq" unit="A" lcdVisible="false" size="200" minValue="-10" maxValue="10" value="0" thresholdValue="1" labelNumberFormat="standard" fractionalScaleDecimals="1" frameDesign="glossyMetal" backgroundDesign="brushedStainless" visible="true" style="margin-bottom: 1em;"></canvas>
       <input id="tgl_virtualSpringMode" type="button" data-dojo-type="gc.dijit.ToggleButton" intermediateChanges="false" label="Virtual Spring Mode" iconClass="dijitCheckBoxIcon" visible="true" onchange="onChangeVirtualSpringMode"></input>
       <br/>
-      <label style="margin-right: 1ex;">        
-        Stiffness:</label>
-      <input id="widget_2501" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" style="width: 42px;"></input>
-      <br/>
       <label style="margin-right: 1ex;">
-        Max. IqRef [A]:</label>
-      <input id="txt_maxIqRef" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" style="width: 42px;"></input>
+        
+        
+        
+					Stiffness:</label>
+    <input id="widget_2501" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" style="width: 42px;"></input>
+      <br/>
+    <label style="margin-right: 1ex;">
+        
+        
+        
+					Max. IqRef [A]:</label>
+    <input id="txt_maxIqRef" type="text" data-dojo-type="gc.dijit.TextBox" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false" visible="true" style="width: 42px;"></input>
       <br/>
       <label style="margin-right: 1ex;"> Deflection [deg]:</label>
-      <label id="widget_15837" data-dojo-type="gc.dijit.Label" label="???" visible="true"></label>
-      <input id="widget_27886" type="button" data-dojo-type="gc.dijit.ValueButton" value="1" intermediateChanges="false" label="Reset" iconClass="dijitNoIcon" visible="true"></input>
+        
+        
+        
+    <label id="widget_15837" data-dojo-type="gc.dijit.Label" label="???" visible="true"></label>
+    <input id="widget_27886" type="button" data-dojo-type="gc.dijit.ValueButton" value="1" intermediateChanges="false" label="Reset" iconClass="dijitNoIcon" visible="true"></input>
       <br/>
-      <label>
-        Offset [deg]:</label>
-      <div id="widget_1753" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="1" discreteValues="Infinity" pageIncrement="0.1" slideDuration="2000" visible="true" style="margin: auto; width: 200px;">
-        <div id="widget_14261" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
-        <ol id="widget_31485" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0°,180°,360°" container="bottomDecoration" style="font-size: 80%; height: auto;"></ol>
-      </div>
+    <label>
+        
+        
+        
+					Offset [deg]:</label>
+    <div id="widget_1753" data-dojo-type="gc.dijit.HorizontalSlider" intermediateChanges="false" maximum="1" discreteValues="Infinity" pageIncrement="0.1" slideDuration="2000" visible="true" style="margin: auto; width: 200px;">
+     <div id="widget_14261" data-dojo-type="gc.dijit.HorizontalRule" container="bottomDecoration" style="height: 5px;"></div>
+     <ol id="widget_31485" data-dojo-type="gc.dijit.HorizontalRuleLabels" labels="0°,180°,360°" container="bottomDecoration" style="font-size: 80%; height: auto;"></ol>
     </div>
+   </div>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Settings" extractContent="false" preventCache="false" preload="false" refreshOnShow="false" doLayout="true" selected="true" closable="false">
-    <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
-      <colgroup>
-        <col></col>
-        <col></col>
-      </colgroup>
-      <tbody>
-        <tr>
-          <td>
+   <table style="border-collapse: collapse; table-layout: fixed; width: 100%; height: auto;">
+    <colgroup>
+     <col></col>
+     <col></col>
+    </colgroup>
+    <tbody>
+    <tr>
+     <td>
+
+
+
             
             
             
             
-            
-            
-            
-            GUI Update Rate [ms]:</td>
-          <td>
-            <input type="text" id="widget_28343" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            
+						GUI Update Rate [ms]:</td>
+     <td>
+      <input type="text" id="widget_28343" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true"></input>
+     </td>
+    </tr>
+    <tr>
+     <td>
             
             
             
             
-            
-            
-            Max. Speed [krpm]:</td>
-          <td>
-            <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" value="4" onchange="changeMaxSpeed"></input>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+
+
+						Max. Speed [krpm]:</td>
+     <td>
+      <input type="text" id="nsp_maxSpeed" data-dojo-type="gc.dijit.NumberSpinner" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" tooltip="Maximum speed used for dials and gauges" value="4" onchange="changeMaxSpeed"></input>
+     </td>
+    </tr>
+    </tbody>
+   </table>
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Export">
     <p>
@@ -439,8 +451,8 @@ require([
       
       
       To export logged data for offline analysis, write the data to an array in your program code. When the array is filled, enter it's name here (and the correct Q-Value) and click "Save to file".
-    <table>
-        <tr>
+			<table>
+     <tr>
           <th>
             
             
@@ -449,119 +461,119 @@ require([
           <td>
             <input type="text" data-dojo-type="dijit.form.TextBox" id="txt_exportVarName" value="gDataLog" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
           </td>
-        </tr>
-        <tr>
+     </tr>
+     <tr>
           <th>
             
             
             
             Q-Value:</th>
-          <td>
-            <input type="text" id="spn_exportQValue" data-dojo-type="gc.dijit.NumberSpinner" max="31" min="0" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="24"></input>
+      <td>
+       <input type="text" id="spn_exportQValue" data-dojo-type="gc.dijit.NumberSpinner" max="31" min="0" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" invalidMessage="$_unset_$" visible="true" value="24"></input>
           </td>
-        </tr>
-      </table>
-      <input type="button" data-dojo-type="dijit.form.Button" intermediateChanges="false" label="Save to file" iconClass="dijitNoIcon" onclick="exportValue"></input>
-    </p>
+     </tr>
+    </table>
+    <input type="button" data-dojo-type="dijit.form.Button" intermediateChanges="false" label="Save to file" iconClass="dijitNoIcon" onclick="exportValue"></input>
+   </p>
   </div>
-  </span><span id="gauges" style="float: left;">
-<canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
+ </span><span id="gauges" style="float: left;">
+  <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
   <br/>
   <canvas id="gauge_speedQEP" data-dojo-type="gc.dijit.AnalogGauge" title="Speed QEP" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin-left: 1em;"></canvas>
-  </span>
-<span id="infoobar" style="border: 1px solid grey; padding: 1ex; background: white; float: left; font-size: 140%; margin-left: 1em; margin-top: 1em; width: 300px;">
-<table style="width: 100%; height: auto;" cellspacing="5">
-    <colgroup>
-      <col></col>
-      <col></col>
-    </colgroup>
-    <tbody>
-      <tr>
-        <td>
-          
-          
-         Pos_mrev</td>
-        <td style="font-family: monospace; width: 8em;">
-          <label id="widget_28678" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          
-         Pos_erev</td>
-        <td>
-          <label id="widget_33109" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          Pos mech. [deg]</td>
-        <td>
-          <label id="lbl_pos_deg" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          Speed FAST [krpm]</td>
-        <td>
-          <label id="lbl_speed_fast" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          Speed Encoder [krpm]</td>
-        <td>
-          <label id="lbl_speed_qep" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          I<sub>
-            
-            q</sub> Ref [A]</td>
-        <td>
-          <label id="lbl_IqRef" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          I<sub>
-            
-            q</sub> [A]</td>
-        <td>
-          <label id="lbl_Iq" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          Torque [Nm]</td>
-        <td>
-          <label id="lbl_torque" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          
-          Encoder Error [counts]</td>
-        <td>
-          <label id="widget_5865" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
-        </td>
-      </tr>
-    </tbody>
+ </span>
+ <span id="infoobar" style="border: 1px solid grey; padding: 1ex; background: white; float: left; font-size: 140%; margin-left: 1em; margin-top: 1em; width: 300px;">
+  <table style="width: 100%; height: auto;" cellspacing="5">
+   <colgroup>
+    <col></col>
+    <col></col>
+   </colgroup>
+   <tbody>
+   <tr>
+    <td>
+
+
+					Pos_mrev</td>
+    <td style="font-family: monospace; width: 8em;">
+     <label id="widget_28678" data-dojo-type="gc.dijit.Label" label="???" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+
+					Pos_erev</td>
+    <td>
+     <label id="widget_33109" data-dojo-type="gc.dijit.Label" visible="true" label="???" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					Pos mech. [deg]</td>
+    <td>
+     <label id="lbl_pos_deg" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					Speed FAST [krpm]</td>
+    <td>
+     <label id="lbl_speed_fast" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					Speed Encoder [krpm]</td>
+    <td>
+     <label id="lbl_speed_qep" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					I<sub>
+
+						q</sub> Ref [A]</td>
+    <td>
+     <label id="lbl_IqRef" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					I<sub>
+
+						q</sub> [A]</td>
+    <td>
+     <label id="lbl_Iq" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					Torque [Nm]</td>
+    <td>
+     <label id="lbl_torque" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   <tr>
+    <td>
+
+					Encoder Error [counts]</td>
+    <td>
+     <label id="widget_5865" data-dojo-type="gc.dijit.Label" label="Label" visible="true" style="font-family: monospace;"></label>
+    </td>
+   </tr>
+   </tbody>
   </table>
-  </span>
+ </span>
   <span style="float: left; margin-left: 1em; margin-top: 1em;">
     <table><tr>
      <td><input id="widget_28525" type="button" data-dojo-type="gc.dijit.ValueButton" value="0" intermediateChanges="false" label="Start Log" iconClass="dijitNoIcon" visible="true"></input></td>
      <td><span id="widget_29085" data-dojo-type="gc.dijit.ProgressBar" indeterminate="false" visible="true" style="width: 200px;" maximum="1000"></span></td>
     </tr></table>
-  <label id="lbl_debug" data-dojo-type="gc.dijit.Label" label="Debug Label" visible="true" style="position: absolute; z-index: 900; left: 841px; top: 498px;"></label>
+ <label id="lbl_debug" data-dojo-type="gc.dijit.Label" label="Debug Label" visible="true" style="position: absolute; z-index: 900; left: 841px; top: 498px;"></label>
 </span>
 </div></body></html>
