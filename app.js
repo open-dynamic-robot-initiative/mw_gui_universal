@@ -137,7 +137,7 @@ function getDataFromBoard(name) {
 	$TI.helper.log("Bind 'test' to " + bindname, "app.js");
 	//$TI.guiComposerServer.addBinding("prop", "test", bindname,
 	//		{"dataType": "Array"});
-	$TI.guiComposerServer._bindings.getBind("prop", "test").serverBindName = bindname;
+	//$TI.guiComposerServer._bindings.getBind("prop", "test").serverBindName = bindname;
 
 	// Now get the value
 	var data = $TI.GUIVars.getValue("test");
