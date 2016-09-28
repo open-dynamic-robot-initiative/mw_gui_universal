@@ -63,8 +63,7 @@ require([
     <input id="tgl_runMotor" type="button" data-dojo-type="gc.dijit.ToggleButton" label="Run Motor ID" visible="true" iconClass="dijitCheckBoxIcon"></input>
     <label id="widget_32456" data-dojo-type="gc.dijit.Label" label="Current EST State:" visible="true" style="margin-right: 1ex; margin-left: 2em;"></label>
     <label id="lbl_ESTstate" data-dojo-type="gc.dijit.Label" label=" ???" visible="true"></label>
-    <input id="widget_28525" type="button" data-dojo-type="gc.dijit.ValueButton" value="0" intermediateChanges="false" label="Start Log" iconClass="dijitNoIcon" visible="true"></input>
-    <span id="widget_29085" data-dojo-type="gc.dijit.ProgressBar" indeterminate="false" visible="true" style="width: 200px;" maximum="1000"></span><input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
+    <input id="chk_motorIdDone" type="checkbox" data-dojo-type="gc.dijit.CheckBox" intermediateChanges="false" label="Motor Identified" iconClass="dijitNoIcon" visible="true" readOnly="true" style="width: 16em;"></input>
   </div>
 
   <span data-dojo-type="dijit.layout.TabContainer" tabStrip="false" persist="false" controllerWidget="dijit.layout.TabController" style="min-width: 1em; min-height: 1em; height: 428px; width: 470px;" class="floatleft">
@@ -558,6 +557,11 @@ require([
     </tbody>
   </table>
   </span>
+  <span style="float: left; margin-left: 1em; margin-top: 1em;">
+    <table><tr>
+     <td><input id="widget_28525" type="button" data-dojo-type="gc.dijit.ValueButton" value="0" intermediateChanges="false" label="Start Log" iconClass="dijitNoIcon" visible="true"></input></td>
+     <td><span id="widget_29085" data-dojo-type="gc.dijit.ProgressBar" indeterminate="false" visible="true" style="width: 200px;" maximum="1000"></span></td>
+    </tr></table>
   <label id="lbl_debug" data-dojo-type="gc.dijit.Label" label="Debug Label" visible="true" style="position: absolute; z-index: 900; left: 841px; top: 498px;"></label>
-</div>
-</body></html>
+</span>
+</div></body></html>
