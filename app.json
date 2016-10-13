@@ -393,8 +393,8 @@
         "serverBindName": "gMotorVars[0].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "dataType": "Boolean",
-            "onPropertyChanged": "onAlignMotor1PropertyChanged"
+            "onPropertyChanged": "onAlignMotor1PropertyChanged",
+            "dataType": "Boolean"
         }
     },
     {
@@ -402,8 +402,8 @@
         "serverBindName": "gMotorVars[1].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "dataType": "Boolean",
-            "onPropertyChanged": "onAlignMotor2PropertyChanged"
+            "onPropertyChanged": "onAlignMotor2PropertyChanged",
+            "dataType": "Boolean"
         }
     },
     {
@@ -411,5 +411,47 @@
         "serverBindName": "gUseHwSlider",
         "widgetId": "widget_6452",
         "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "tgl_enableCan",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "dial_IqRef1",
+        "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "sld_IqRef1",
+        "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "num_IqRef1",
+        "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "dial_IqRef2",
+        "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "sld_IqRef2",
+        "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "disabled",
+        "serverBindName": "gFlag_enableCan",
+        "widgetId": "num_IqRef2",
+        "options": {"dataType": "boolean"}
     }
 ]}
