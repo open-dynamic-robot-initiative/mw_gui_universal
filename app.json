@@ -393,8 +393,8 @@
         "serverBindName": "gMotorVars[0].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "onPropertyChanged": "onAlignMotor1PropertyChanged",
-            "dataType": "Boolean"
+            "dataType": "Boolean",
+            "onPropertyChanged": "onAlignMotor1PropertyChanged"
         }
     },
     {
@@ -402,8 +402,8 @@
         "serverBindName": "gMotorVars[1].Flag_enableAlignment",
         "widgetId": "prop",
         "options": {
-            "onPropertyChanged": "onAlignMotor2PropertyChanged",
-            "dataType": "Boolean"
+            "dataType": "Boolean",
+            "onPropertyChanged": "onAlignMotor2PropertyChanged"
         }
     },
     {
@@ -453,5 +453,17 @@
         "serverBindName": "gFlag_enableCan",
         "widgetId": "num_IqRef2",
         "options": {"dataType": "boolean"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gQepIndexWatchdog[0].indexError_counts",
+        "widgetId": "lbl_encoderError1",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gQepIndexWatchdog[1].indexError_counts",
+        "widgetId": "lbl_encoderError2",
+        "options": {"dataType": "String"}
     }
 ]}
