@@ -348,7 +348,7 @@
     },
     {
         "propertyName": "checked",
-        "serverBindName": "gFlag_enableVirtualSpring[0]",
+        "serverBindName": "gFlag_enableVirtualSpring[1]",
         "widgetId": "btn_enableSpring2",
         "options": {"dataType": "Boolean"}
     },
