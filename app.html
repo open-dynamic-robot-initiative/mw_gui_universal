@@ -52,7 +52,7 @@ require([
 <script type="text/javascript" src="lib/davinci.gc_1_5/WebContent/gc/backplane/guiComposer.js"></script>
 <script type="text/javascript" src="app.js"></script>
 </head>
-<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="false" data-maq-comptype="desktop" id="myapp" data-maq-appstates="{}">
+<body class="claro" data-maq-ws="collapse" data-maq-flow-layout="true" data-maq-comptype="desktop" data-maq-appstates="{}" id="myapp">
 
 <div id="widget_1" data-dojo-type="gc.dijit.ContentPane" title="Pane" doLayout="false" style="background: grey; text-align: center; width: 1050px;">
  <label id="widget_2" data-dojo-type="gc.dijit.Label" label="Motor Identification &amp; Test GUI" visible="true" style="color: #ffffff; font-size: 2em;"></label>
@@ -447,11 +447,8 @@ require([
   </div>
   <div data-dojo-type="dijit.layout.ContentPane" title="Export">
     <p>
-      
-      
-      
-      To export logged data for offline analysis, write the data to an array in your program code. When the array is filled, enter it's name here (and the correct Q-Value) and click "Save to file".
-			<table>
+      <!--To export logged data for offline analysis, write the data to an array in your program code. When the array is filled, enter it's name here (and the correct Q-Value) and click "Save to file".-->
+	To export logged data for offline analysis, write the data to an array in your program code. When the array is filled, enter it's name as Server Bind Name of the GUI Variable "test" and set the correct Q-Value in the box blow. Then click "Save to file".	<br/> Setting the variable name here via the text box is not yet possible.   </p> <table>
      <tr>
           <th>
             
@@ -459,8 +456,8 @@ require([
             
             Variable Name:</th>
           <td>
-            <input type="text" data-dojo-type="dijit.form.TextBox" id="txt_exportVarName" value="gDataLog" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
-          </td>
+           <input type="text" data-dojo-type="dijit.form.TextBox" id="txt_exportVarName" disabled="true" intermediateChanges="false" trim="false" uppercase="false" lowercase="false" propercase="false" selectOnClick="false"></input>
+         </td>
      </tr>
      <tr>
           <th>
@@ -474,8 +471,8 @@ require([
      </tr>
     </table>
     <input type="button" data-dojo-type="dijit.form.Button" intermediateChanges="false" label="Save to file" iconClass="dijitNoIcon" onclick="exportValue"></input>
-   </p>
-  </div>
+
+    </div>
  </span><span id="gauges" style="float: left;">
   <canvas id="gauge_speedFAST" data-dojo-type="gc.dijit.AnalogGauge" title="Speed" unit="krpm" lcdVisible="false" size="200" minValue="0" maxValue="5" value="0" thresholdValue="5" labelNumberFormat="fractional" fractionalScaleDecimals="1" frameDesign="brass" backgroundDesign="beige" visible="true" style="margin: 1em;"></canvas>
   <br/>

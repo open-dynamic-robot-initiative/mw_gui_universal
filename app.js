@@ -133,8 +133,8 @@ var FI = undefined;
 function getDataFromBoard(name) {
 	// First bind the GUI variable to the name specified in the text box (for
 	// now, only arrays are supported).
-	var bindname = dijit.byId("txt_exportVarName").get("value");
-	$TI.helper.log("Bind 'test' to " + bindname, "app.js");
+	//var bindname = dijit.byId("txt_exportVarName").get("value");
+	//$TI.helper.log("Bind 'test' to " + bindname, "app.js");
 	//$TI.guiComposerServer.addBinding("prop", "test", bindname,
 	//		{"dataType": "Array"});
 	//$TI.guiComposerServer._bindings.getBind("prop", "test").serverBindName = bindname;
