@@ -1,0 +1,336 @@
+{"widgetBindings": [
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.Speed_krpm, 24)",
+        "widgetId": "gauge_speedFAST",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_enableSys",
+        "widgetId": "widget_18276",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_Run_Identify",
+        "widgetId": "tgl_runMotor",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Rr_Ohm",
+        "widgetId": "widget_26548",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Rs_Ohm",
+        "widgetId": "widget_25384",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Lsd_H",
+        "widgetId": "widget_15410",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Lsq_H",
+        "widgetId": "widget_9280",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.Flux_VpHz",
+        "widgetId": "widget_15281",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.Flag_MotorIdentified",
+        "widgetId": "chk_motorIdDone",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[0], 24)",
+        "widgetId": "txt_I_A_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[1], 24)",
+        "widgetId": "txt_I_B_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.I_bias.value[2], 24)",
+        "widgetId": "txt_I_C_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[0], 24)",
+        "widgetId": "txt_V_A_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[1], 24)",
+        "widgetId": "txt_V_B_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.V_bias.value[2], 24)",
+        "widgetId": "txt_V_C_offset",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedQEP_krpm, 24)",
+        "widgetId": "gauge_speedQEP",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedRef_krpm, 24)",
+        "widgetId": "sld_speedRef",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpeedRef_krpm, 24)",
+        "widgetId": "widget_34152",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.MaxAccel_krpmps, 24)",
+        "widgetId": "widget_30148",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
+        "widgetId": "sld_IqRef",
+        "options": {
+            "dataType": "Double",
+            "outPreProcessingFunction": "postproc_sld_IqRef",
+            "inPreProcessingFunction": "abs"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
+        "widgetId": "widget_2398",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "widgetId": "widget_27875",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gMotorVars.EstState",
+        "widgetId": "lbl_ESTstate",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "convertEstStateToString"
+        }
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gMotorVars.SpinTAC.VelIdRun",
+        "widgetId": "widget_22019",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.InertiaEstimate_Aperkrpm, 24)",
+        "widgetId": "widget_18009",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.FrictionEstimate_Aperkrpm, 24)",
+        "widgetId": "widget_3467",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.VelIdGoalSpeed_krpm, 24)",
+        "widgetId": "widget_31340",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gMotorVars.SpinTAC.VelIdTorqueRampTime_sec, 24)",
+        "widgetId": "widget_6034",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gMotorVars.SpinTAC.VelIdErrorID",
+        "widgetId": "widget_19405",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "checked",
+        "serverBindName": "gVirtualSpring.enabled",
+        "widgetId": "tgl_virtualSpringMode",
+        "options": {"dataType": "Boolean"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gVirtualSpring.stiffness",
+        "widgetId": "widget_2501",
+        "options": {
+            "dataType": "String",
+            "outPreProcessingFunction": "validateVirtualSpringStiffness"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gVirtualSpring.deflection, 24)",
+        "widgetId": "widget_15837",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "$refresh_interval",
+        "widgetId": "widget_28343",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gVirtualSpring.maxCurrentRef, 24)",
+        "widgetId": "txt_maxIqRef",
+        "options": {
+            "dataType": "String",
+            "outPreProcessingFunction": "validateNumber"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "widgetId": "widget_28678",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_erev, 24)",
+        "widgetId": "widget_33109",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(st_obj.vel.conv.Pos_mrev, 24)",
+        "widgetId": "lbl_pos_deg",
+        "options": {
+            "dataType": "String",
+            "inPreProcessingFunction": "mrevToDegree"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Speed_krpm, 24)",
+        "widgetId": "lbl_speed_fast",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.SpeedQEP_krpm, 24)",
+        "widgetId": "lbl_speed_qep",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Iq_A, 24)",
+        "widgetId": "lbl_Iq",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.IqRef_A, 24)",
+        "widgetId": "lbl_IqRef",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "Q(gMotorVars.Torque_Nm, 24)",
+        "widgetId": "lbl_torque",
+        "options": {
+            "dataType": "String",
+            "dataFormat": "%.3f"
+        }
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gVirtualSpring.flagResetOffset",
+        "widgetId": "widget_27886",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "Q(gVirtualSpring.equilibriumPosition, 24)",
+        "widgetId": "widget_1753",
+        "options": {"dataType": "Double"}
+    },
+    {
+        "propertyName": "label",
+        "serverBindName": "gIndexPositionError_count",
+        "widgetId": "widget_5865",
+        "options": {"dataType": "String"}
+    },
+    {
+        "propertyName": "data",
+        "serverBindName": "gIqLog",
+        "widgetId": "widget_4639",
+        "options": {"dataType": "Array"}
+    },
+    {
+        "propertyName": "test",
+        "serverBindName": "gDataLogIqRef",
+        "widgetId": "prop",
+        "options": {"dataType": "Array"}
+    },
+    {
+        "propertyName": "progress",
+        "serverBindName": "gLogIndex",
+        "widgetId": "widget_29085",
+        "options": {"dataType": "number"}
+    },
+    {
+        "propertyName": "value",
+        "serverBindName": "gLogIndex",
+        "widgetId": "widget_28525",
+        "options": {"dataType": "String"}
+    }
+]}
