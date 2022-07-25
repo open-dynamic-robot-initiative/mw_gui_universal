@@ -84,4 +84,4 @@ Same as above but for single motor applications.
 
 
 .. _Code Composer Studio: https://www.ti.com/tool/CCSTUDIO
-.. _Dual Motor Torque Control firmware: https://github.com/open-dynamic-robot-initiative/mw_dual_motor_torque_ctrl
+.. _Dual Motor Torque Control firmware: https://open-dynamic-robot-initiative.github.io/udriver_firmware/
